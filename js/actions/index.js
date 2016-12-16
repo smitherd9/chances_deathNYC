@@ -45,7 +45,7 @@ const bySexError = (sex, err) => {
 
 const byEthnicity = function(ethnicity) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/ethnicity', 
+        var url = new Request('https://tranquil-basin-74006.herokuapp.com/ethnicity' + ethnicity, 
         	{method: 'GET', 
         	// body: JSON.stringify({
         	// 	ethnicity: ethnicity
@@ -82,7 +82,7 @@ const byEthnicity = function(ethnicity) {
 
 const bySex = function(sex) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/sex', 
+        var url = new Request('https://tranquil-basin-74006.herokuapp.com/sex' + sex, 
         	{method: 'GET', 
         	headers: {
   				'Accept': 'application/json',
