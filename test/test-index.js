@@ -9,6 +9,6 @@ describe('App Container', function() {
 		let renderer = TestUtils.createRenderer();
 		renderer.render(<AppContainer />);
 		let result = renderer.getRenderOutput();
-		result.props.className.should.equal('hello');
+		result.props.className.should.equal('container');
 	});
 });
