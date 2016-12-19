@@ -1,5 +1,4 @@
 import React from 'react';
-// import { render } from 'react-dom';
 import actions from '../actions/index';
 import store from '../store';
 import { connect } from 'react-redux';
@@ -24,8 +23,8 @@ class Display extends React.Component {
 			
 			// <div>
 			<div className="display">
-				<h3>Death Rate:</h3>
-				<DeathRate />
+				<h3>Death Rate: <DeathRate /></h3>
+				
 				<h3>Age Adjusted Death Rate: </h3>
 				<AgeAdjusted />
 				<h3>Leading Cause of Death: </h3>

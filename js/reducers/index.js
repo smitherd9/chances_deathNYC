@@ -3,14 +3,14 @@ import store from '../store';
 import { combineReducers, createStore } from 'redux';
 
 const initialState = {
-	ethnicity: [],
+	response: [],
 	selectedEthnicity: "",
-	selectedSex: "",
-	sex: [],
-	deathRate: [],
-	leadingCause: [],
-	ageAdjusted: [],
-	deathNum: []
+	selectedSex: ""
+	// sex: [],
+	// deathRate: [],
+	// leadingCause: [],
+	// ageAdjusted: [],
+	// deathNum: []
 }
 
 
@@ -25,13 +25,9 @@ const DeathReducer = function(state, action) {
     if (action.type === actions.ETHNICITY) {
 
     	return Object.assign({}, state, {
-            ethnicity: action.ethnicity,
-            selectedEthnicity: action.selectedEthnicity,
-            sex: action.sex,
-            deathRate: action.deathRate,
-            leadingCause: action.leadingCause,
-            ageAdjusted: action.ageAdjusted,
-            deathNum: action.deathNum
+            response: action.response
+            
+
 
         });
     }
@@ -43,6 +39,30 @@ const DeathReducer = function(state, action) {
             selectedSex: action.selectedSex
 
         });
+    }
+
+        if (action.type === actions.SELECTED_SEX) {
+
+        return Object.assign({}, state, {       
+            
+            selectedSex: action.selectedSex
+
+        });
+    }
+
+
+    if (action.type === actions.SEX) {
+
+        return Object.assign({}, state, {            
+            ethnicity: action.ethnicity,
+            sex: action.sex,
+            deathRate: action.deathRate,
+            leadingCause: action.leadingCause,
+            ageAdjusted: action.ageAdjusted,
+            deathNum: action.deathNum
+
+        });
+
     }
 
 

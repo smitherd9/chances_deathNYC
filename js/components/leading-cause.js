@@ -14,7 +14,7 @@ class LeadingCause extends React.Component {
 	render() {
 
 		return(
-			<p>{this.props.leadingCause}</p>
+			<p className="results">{this.props.leadingCause}</p>
 
 		);
 	}
@@ -25,7 +25,7 @@ class LeadingCause extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	leadingCause: state.leadingCause
+	leadingCause: state.response.leadingCause
         
     }
 };

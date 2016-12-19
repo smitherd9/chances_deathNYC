@@ -14,7 +14,7 @@ class AgeAdjusted extends React.Component {
 	render() {
 
 		return(
-			<p>{this.props.ageAdjusted}</p>
+			<p className="results">{this.props.ageAdjusted}</p>
 
 		);
 	}
@@ -26,7 +26,7 @@ class AgeAdjusted extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	ageAdjusted: state.ageAdjusted
+	ageAdjusted: state.response.ageAdjusted
         
     }
 };

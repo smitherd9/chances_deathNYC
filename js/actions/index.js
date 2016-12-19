@@ -3,24 +3,32 @@ const SELECTED_STATE = 'SELECTED_STATE';
 const selectedState = (selected) => {
 	return {
 		type: SELECTED_STATE,
-		selectedState: selected
+		selectedEthnicity: selected
 	}
+}
+
+const SELECTED_SEX = 'SELECTED_SEX';
+const selectedSex = (selected) => {
+    return {
+        type: SELECTED_SEX,
+        selectedSex: selected
+    }
 }
 
 
 const ETHNICITY = 'ETHNICITY';
-const byEthnicitySuccess = (ethnicity) => {
+const byEthnicitySuccess = (response) => {
 	return {
 		type: ETHNICITY,
-		ethnicity: ethnicity
+		response: response
 	}
 }
 
 const ETHNICITY_ERR = 'ETHNICITY_ERR';
-const byEthnicityError = (ethnicity, err) => {
+const byEthnicityError = (response, err) => {
 	return {
 		type: ETHNICITY,
-		ethnicity: ethnicity
+		response: response
 	}
 }
 
@@ -45,11 +53,8 @@ const bySexError = (sex, err) => {
 
 const byEthnicity = function(ethnicity) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/ethnicity', 
+        var url = new Request('http://localhost:8000/ethnicity/' + ethnicity, 
         	{method: 'GET', 
-        	// body: JSON.stringify({
-        	// 	ethnicity: ethnicity
-        	// }), 
         	headers: {
   				'Accept': 'application/json',
   				'Content-Type': 'application/json'
@@ -68,12 +73,12 @@ const byEthnicity = function(ethnicity) {
         })
         .then(function(data) {            
             return dispatch(
-                byEthnicitySuccess(ethnicity)
+                byEthnicitySuccess(data)
             );
         })
         .catch(function(err) {
             return dispatch(
-                byEthnicityError(ethnicity, err)
+                byEthnicityError(data, err)
             );
         });
     }
@@ -82,7 +87,7 @@ const byEthnicity = function(ethnicity) {
 
 const bySex = function(sex) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/sex', 
+        var url = new Request('http://localhost:8000/sex/' + sex, 
         	{method: 'GET', 
         	headers: {
   				'Accept': 'application/json',
@@ -129,3 +134,5 @@ exports.bySex = bySex;
 
 exports.SELECTED_STATE = SELECTED_STATE;
 exports.selectedState = selectedState;
+exports.SELECTED_SEX = SELECTED_SEX;
+exports. selectedSex = selectedSex;

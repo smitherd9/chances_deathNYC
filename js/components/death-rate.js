@@ -14,7 +14,7 @@ class DeathRate extends React.Component {
 	render() {
 
 		return(
-			<p>{this.props.deathRate}</p>
+			<p className="results">{this.props.deathRate}</p>
 
 		);
 	}
@@ -26,7 +26,7 @@ class DeathRate extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	deathRate: state.deathRate
+	deathRate: state.response.deathRate
         
     }
 };
