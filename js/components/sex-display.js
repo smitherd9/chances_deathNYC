@@ -1,0 +1,33 @@
+import React from 'react';
+import actions from '../actions/index';
+import store from '../store';
+import { connect } from 'react-redux';
+
+
+class SexDisplay extends React.Component {
+	constructor(props){
+		super(props);
+
+	}
+
+
+	render() {
+
+		return(
+			<p className="results">{this.props.sex}</p>
+
+		);
+	}
+
+}
+
+
+
+let mapStateToProps = (state, props) => {
+    return {
+	sex: state.response.sex
+        
+    }
+};
+
+export default connect(mapStateToProps)(SexDisplay);

@@ -6,11 +6,13 @@ import DeathRate from './death-rate';
 import AgeAdjusted from './age-adjusted';
 import LeadingCause from './leading-cause';
 import DeathNum from './death-num';
-// import Ethnicity from './ethnicity';
-// import Sex from './sex';
+import YearDisplay from './year-display';
+import EthnicityDisplay from './ethnicity-display';
+import SexDisplay from './sex-display';
 
 
-class Display extends React.Component {
+
+export default class Display extends React.Component {
 	constructor(props){
 		super(props);
 
@@ -21,7 +23,7 @@ class Display extends React.Component {
 	render() {
 		return (
 			
-			// <div>
+			
 			<div className="display">
 				<h3>Death Rate: <DeathRate /></h3>
 				
@@ -31,8 +33,14 @@ class Display extends React.Component {
 				<LeadingCause />
 				<h3>Overall Number of Deaths: </h3>
 				<DeathNum />
+				<h3>Year: </h3>
+				<YearDisplay />
+				<h3>Ethnicity: </h3>
+				<EthnicityDisplay />
+				<h3>Sex: </h3>
+				<SexDisplay />
 			</div>
-			// </div>
+			
 
 			);
 	}
@@ -41,18 +49,3 @@ class Display extends React.Component {
 
 
 
-let mapStateToProps = (state, props) => {
-    return {
-    ethnicity: [],
-	selectedEthnicity: "",
-	selectedSex: "",
-	sex: [],
-	deathRate: [],
-	leadingCause: [],
-	ageAdjusted: [],
-	deathNum: []
-        
-    }
-};
-
-export default connect(mapStateToProps)(Display);

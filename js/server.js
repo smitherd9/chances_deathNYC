@@ -24,7 +24,7 @@ app.get('/sex/:sex', function(req, res) {
 
         .end(function(response) {
         storeInData(response.body);        
-        res.json(Data.returnData);        
+        res.json(finalChancesScore());        
 
         });
 });
@@ -48,14 +48,34 @@ app.get('/ethnicity/:ethnicity', function(req, res) {
 });
 
 
+app.get('/year/:year', function(req, res) {
+    req.query.year = req.params.year;
+    req.query.$limit = 50;
+    req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
+
+        unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
+        .query(req.query)
+
+        .end(function(response) {
+        storeInData(response.body);        
+        res.json(finalChancesScore());
+        
+
+        });
+
+});
+
+
 
 const storeInData = function(response) {
     console.log(response.length);
+    Data.returnData = [];
     for (let i = 0; i < response.length; i++) {
         let data = response[i];
         
-        if (data.hasOwnProperty('age_adjusted_death_rate') && (data.hasOwnProperty('death_rate')) && (data.hasOwnProperty('deaths')) && (data.hasOwnProperty('sex')) && (data.hasOwnProperty('year')) && (data.hasOwnProperty('leading_cause'))) {
+        if (data.hasOwnProperty('age_adjusted_death_rate') && (data.hasOwnProperty('race_ethnicity')) && (data.hasOwnProperty('death_rate')) && (data.hasOwnProperty('deaths')) && (data.hasOwnProperty('sex')) && (data.hasOwnProperty('year')) && (data.hasOwnProperty('leading_cause'))) {
             Data.returnData.push({
+                'race_ethnicity': data.race_ethnicity,
                 'ageAdjusted': data.age_adjusted_death_rate,
                 'deathRate': data.death_rate,
                 'leadingCause': data.leading_cause,
@@ -76,7 +96,7 @@ const storeInData = function(response) {
 
 const finalChancesScore = function() {
 // 	// give score from 1 - 10
-// console.log(Data.returnData);
+
     return Data.returnData.reduce(function(accumulator, current, index){
         if (+current.ageAdjusted > +accumulator.ageAdjusted){
             return current;

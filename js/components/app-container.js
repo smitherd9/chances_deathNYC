@@ -3,45 +3,44 @@ import { render } from 'react-dom';
 import { Grid } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import { Transition } from 'react-bootstrap'
+import { connect } from 'react-redux';
 import Ethnicity from './ethnicity';
 import Sex from './sex';
+import Year from './year';
 import Display from './display-results';
 import Header from './header';
 import Skull from './skull';
 import WitchHouse from './witch-house';
 import SkeletonField from './skeleton-field';
+// import Chart from './c3-chart';
+import IntroScreen from './intro-screen';
+import ResultsScreen from './results-screen';
+
+// const fade = 2000;
 
 
+class AppContainer extends React.Component {
+	constructor(){
+		super();
+		
+	}
 
+	// fadeOut(){
+	// 	setTimeout(() => {
 
-export default class AppContainer extends React.Component {
+	// 	}, 2000);
+	// }
+
 
 	render() {
 		return (
 
 		<div>
-		<Header />
-		<Grid>
-		<Row className="searchRow">
-		
-		
-		<Col md={4}><Ethnicity /></Col>
-		<Col md={4}><Sex /></Col>
-		<Col md={4}><WitchHouse /></Col>		
 
+		{ this.props.introScreen ? (<IntroScreen />) : (<Header />	) }
 		
-		
-		
-		</Row>
-
-		<Row className="searchRow">
-		<Col md={4}><Display /></Col>
-		<Col md={8}><SkeletonField /></Col>
-
-		
-		</Row>
-		
-		</Grid>
+		{ this.props.resultsScreen ? (<ResultsScreen />) : (<Header /> ) }
 
 		
 		</div>
@@ -49,3 +48,14 @@ export default class AppContainer extends React.Component {
 		);
 	}
 }
+
+
+
+const mapStateToProps = (state, props) => {
+    return {
+        introScreen: state.introScreen,
+        resultsScreen: state.resultsScreen
+    }
+}
+
+export default connect(mapStateToProps)(AppContainer);

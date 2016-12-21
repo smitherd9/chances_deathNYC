@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
@@ -10,23 +9,20 @@ import { FormControl } from 'react-bootstrap';
 import { Radio } from 'react-bootstrap';
 
 
-
-
-class Sex extends React.Component {
+class Year extends React.Component {
 	constructor(props){
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
 		this.showResults = this.showResults.bind(this);
-		// this.selectedState = this.selectedState.bind(this);
 
 	}
 
 	handleClick(e) {
 		e.preventDefault();	
-		store.dispatch(actions.bySex(store.getState().selectedSex));
+		store.dispatch(actions.byYear(store.getState().selectedYear));
 		console.log(store.getState());
 		console.log('selected: ' + store.getState().selectedSex);
-		console.log('typeOf: ' + typeof(store.getState().selectedSex));
+		console.log('typeOf: ' + typeof(store.getState().selectedYear));
 		this.showResults();
 	}
 
@@ -34,7 +30,7 @@ class Sex extends React.Component {
 		e.preventDefault();
 		console.log(typeof(e.target.value));
 		console.log(e.target.value);
-		store.dispatch(actions.selectedSex(e.target.value));
+		store.dispatch(actions.selectedYear(e.target.value));
 	}
 
 	showResults() {
@@ -43,7 +39,7 @@ class Sex extends React.Component {
 
 	componentWillUpdate(nextProps, nextState) {
 		if (nextProps.response == true) {
-			console.log('this.nextProps will update sex.js: ' + nextProps);
+			console.log('this.nextProps will update year.js: ' + nextProps);
 		}
 		
 	}
@@ -60,21 +56,57 @@ class Sex extends React.Component {
 		<div>
 
 		<div className="shadow">
-		<h3>Search by Sex</h3>
+		<h3>Search by Year</h3>
 		<form>
 		<FormGroup>
 
 		<Radio
-			value="M"
+			value="2007"
 			onClick={this.selectedState}
 		>
-		<p>Male</p> 		
+		<p>2007</p> 		
 		</Radio>
 		<Radio
-			value="F"
+			value="2008"
 			onClick={this.selectedState}
 		>
-		<p>Female</p> 		
+		<p>2008</p> 		
+		</Radio>
+		<Radio
+			value="2009"
+			onClick={this.selectedState}
+		>
+		<p>2009</p> 		
+		</Radio>
+		<Radio
+			value="2010"
+			onClick={this.selectedState}
+		>
+		<p>2010</p> 		
+		</Radio>
+		<Radio
+			value="2011"
+			onClick={this.selectedState}
+		>
+		<p>2011</p> 		
+		</Radio>
+		<Radio
+			value="2012"
+			onClick={this.selectedState}
+		>
+		<p>2012</p> 		
+		</Radio>
+		<Radio
+			value="2013"
+			onClick={this.selectedState}
+		>
+		<p>2013</p> 		
+		</Radio>
+		<Radio
+			value="2014"
+			onClick={this.selectedState}
+		>
+		<p>2014</p> 		
 		</Radio>
 		</FormGroup>
 		<Button bsStyle="primary" bsSize="large"  type="button" onClick={this.handleClick}>Go!</Button>
@@ -90,10 +122,10 @@ class Sex extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-    	response: state.response,
-    	selectedSex: state.selectedSex
+    selectedYear: state.selectedYear,
+	response: state.response
         
     }
 };
 
-export default connect(mapStateToProps)(Sex);
+export default connect(mapStateToProps)(Year);

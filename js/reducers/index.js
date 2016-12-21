@@ -5,12 +5,10 @@ import { combineReducers, createStore } from 'redux';
 const initialState = {
 	response: [],
 	selectedEthnicity: "",
-	selectedSex: ""
-	// sex: [],
-	// deathRate: [],
-	// leadingCause: [],
-	// ageAdjusted: [],
-	// deathNum: []
+	selectedSex: "",
+    selectedYear: "",
+    introScreen: true,
+    resultsScreen: false
 }
 
 
@@ -32,16 +30,16 @@ const DeathReducer = function(state, action) {
         });
     }
 
-        if (action.type === actions.SELECTED_STATE) {
+    if (action.type === actions.SELECTED_STATE) {
 
     	return Object.assign({}, state, {            
-            selectedEthnicity: action.selectedEthnicity,
-            selectedSex: action.selectedSex
+            selectedEthnicity: action.selectedEthnicity
+           
 
         });
     }
 
-        if (action.type === actions.SELECTED_SEX) {
+    if (action.type === actions.SELECTED_SEX) {
 
         return Object.assign({}, state, {       
             
@@ -54,15 +52,55 @@ const DeathReducer = function(state, action) {
     if (action.type === actions.SEX) {
 
         return Object.assign({}, state, {            
-            ethnicity: action.ethnicity,
-            sex: action.sex,
-            deathRate: action.deathRate,
-            leadingCause: action.leadingCause,
-            ageAdjusted: action.ageAdjusted,
-            deathNum: action.deathNum
+            response: action.response
 
         });
 
+    }
+
+    if (action.type === actions.SELECTED_YEAR) {
+
+        return Object.assign({}, state, {       
+            
+            selectedYear: action.selectedYear
+
+        });
+    }
+
+    if (action.type === actions.YEAR) {
+
+        return Object.assign({}, state, {       
+            
+            response: action.response
+
+        });
+    }
+
+    if (action.type === actions.INTRO) {
+
+        return Object.assign({}, state, {       
+            
+            introScreen: false
+
+        });
+    }
+
+    if (action.type === actions.RESULTS) {
+
+        return Object.assign({}, state, {       
+            
+            resultsScreen: true
+
+        });
+    }
+
+    if (action.type === actions.HIDE_RESULTS) {
+
+        return Object.assign({}, state, {       
+            
+            resultsScreen: false
+
+        });
     }
 
 
