@@ -3,13 +3,10 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
-import { FormGroup } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-import { Radio } from 'react-bootstrap';
-import { Grid } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, Radio, Checkbox, DropdownButton, MenuItem, Grid, Row, Col } from 'react-bootstrap';
+import { browserHistory } from 'react-router';
+
+
 
 
 
@@ -37,6 +34,7 @@ class Ethnicity extends React.Component {
 
 	showResults() {
 		store.dispatch(actions.showResults(true));
+		browserHistory.push('/results');
 	}
 
 	componentDidUpdate(){
@@ -44,6 +42,9 @@ class Ethnicity extends React.Component {
 	}
 
 	render() {
+
+
+
 		return (	
 
 		<div className="shadow">		

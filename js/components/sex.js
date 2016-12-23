@@ -4,10 +4,9 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
-import { FormGroup } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-import { Radio } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, Radio } from 'react-bootstrap';
+import { browserHistory } from 'react-router';
+
 
 
 
@@ -39,6 +38,7 @@ class Sex extends React.Component {
 
 	showResults() {
 		store.dispatch(actions.showResults(true));
+		browserHistory.push('/results');
 	}
 
 	componentWillUpdate(nextProps, nextState) {

@@ -1,9 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Grid } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
 import { Transition } from 'react-bootstrap'
+import { Button, Grid, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Ethnicity from './ethnicity';
 import Sex from './sex';
@@ -13,11 +11,11 @@ import Header from './header';
 import Skull from './skull';
 import WitchHouse from './witch-house';
 import SkeletonField from './skeleton-field';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import Chart from './c3-chart';
 import IntroScreen from './intro-screen';
 import ResultsScreen from './results-screen';
-
-// const fade = 2000;
+import { browserHistory } from 'react-router';
 
 
 class AppContainer extends React.Component {
@@ -26,22 +24,15 @@ class AppContainer extends React.Component {
 		
 	}
 
-	// fadeOut(){
-	// 	setTimeout(() => {
-
-	// 	}, 2000);
-	// }
 
 
 	render() {
 		return (
 
-		<div>
+		<div className="appContainer">
+		<Header />	
 
-		{ this.props.introScreen ? (<IntroScreen />) : (<Header />	) }
-		
-		{ this.props.resultsScreen ? (<ResultsScreen />) : (<Header /> ) }
-
+		{this.props.children}	
 		
 		</div>
 

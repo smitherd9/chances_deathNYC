@@ -2,13 +2,11 @@ import React from 'react';
 import actions from '../actions/index';
 import store from '../store';
 import { connect } from 'react-redux';
-import { Jumbotron } from 'react-bootstrap';
-import { Grid } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import Ethnicity from './ethnicity';
-import Sex from './sex';
-import Year from './year';
+import { Grid, Row, Col } from 'react-bootstrap';
+// import Ethnicity from './ethnicity';
+// import Sex from './sex';
+// import Year from './year';
+import SearchSection from './search-section';
 
 
 export default class Header extends React.Component {
@@ -25,11 +23,6 @@ export default class Header extends React.Component {
 			
 
 			
-			<Row className="searchRow">
-				<Col md={4}><Ethnicity /></Col>
-				<Col md={4}><Sex /></Col>
-				<Col md={4}><Year /></Col>	
-			</Row>
 			</Grid>
 			</div>
 			

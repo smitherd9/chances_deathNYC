@@ -14,6 +14,7 @@ import Header from './header';
 import Skull from './skull';
 import WitchHouse from './witch-house';
 import SkeletonField from './skeleton-field';
+import { browserHistory } from 'react-router';
 
 
 
@@ -25,6 +26,7 @@ class IntroScreen extends React.Component {
 
 	hide() {
 		store.dispatch(actions.introScreen(false));
+		browserHistory.push('/app');
 	}
 
 
@@ -34,12 +36,25 @@ class IntroScreen extends React.Component {
 		
 		return (
 			<div className="intro">
+			<Grid>
+			<Row>
 			<h1 className="title">What are the Chances? <br />
 			<small className="creepster">--- Death in NYC</small></h1>
 			<span className="skull"><img src="../../img/skull.svg" /></span>
+			</Row>
+			
+			<Row>
+			<Col md={6}>
+			<h2 className="curious">Ever been curious about how you <br />might exit this mortal coil?</h2>
+			
+			</Col>			
+			</Row>
+			</Grid>
 			<div className="introButton">	
-			<Button className="enter" bsSize="large" type="button" onClick={this.hide} active>Enter! </Button>	
+			<Button className="enter" bsSize="large" type="button" onClick={this.hide} active>Enter! </Button>
+
 			</div>
+			<h2 className="clickEnter">Click Enter to consult the oracle!</h2>	
 			</div>
 		
 			
