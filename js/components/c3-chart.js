@@ -2,14 +2,16 @@ import React from 'react';
 import actions from '../actions/index';
 import store from '../store';
 import { connect } from 'react-redux';
-import  C3Chart  from 'react-c3js';
+// import  C3Chart  from 'react-c3js';
+const isBrowser = typeof window !== 'undefined';
+const C3Chart = isBrowser ? require( 'react-c3js') : undefined;
 
 
 
 class Chart extends React.Component {
 	constructor(props){
 		super(props);
-		this.generateChart = this.generateChart.bind(this);
+		// this.generateChart = this.generateChart.bind(this);
 			this.data = {
 				x: 'x',
 				// json: this.props.response,
@@ -61,12 +63,6 @@ class Chart extends React.Component {
       		}
       	}
       
-
-
-
-
-
-
 
 	generateChart() {
 
