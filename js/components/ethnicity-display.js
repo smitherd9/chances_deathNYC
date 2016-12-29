@@ -12,20 +12,31 @@ class EthnicityDisplay extends React.Component {
 
 
 	render() {
+			let ethArray = [];			
+			for (let i = 0; i < this.props.response.length; i++) {			
+				ethArray.push(<p>{this.props.response[i].race_ethnicity}</p>);				
+								
+			}				
+	
 
 		return(
-			<p className="results">{this.props.ethnicity}</p>
+
+			<div className="results">{ethArray[0]}</div>
+
+			
 
 		);
+
+	  }
 	}
 
-}
+
 
 
 
 let mapStateToProps = (state, props) => {
     return {
-	ethnicity: state.response.race_ethnicity
+	response: state.response
         
     }
 };

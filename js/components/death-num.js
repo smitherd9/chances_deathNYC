@@ -13,8 +13,14 @@ class DeathNum extends React.Component {
 
 	render() {
 
+		let deathNumArray = [];			
+			for (let i = 0; i < this.props.response.length; i++) {			
+				deathNumArray.push(<p>{this.props.response[i].deathNum}</p>);				
+								
+			}	
+
 		return(
-			<p className="results">{this.props.deathNum}</p>
+			<div className="results">{deathNumArray[0]}</div>
 
 		);
 	}
@@ -26,7 +32,7 @@ class DeathNum extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	deathNum: state.response.deathNum
+	response: state.response
         
     }
 };

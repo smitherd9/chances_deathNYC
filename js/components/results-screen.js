@@ -9,7 +9,7 @@ import Year from './year';
 import Display from './display-results';
 import Header from './header';
 import { browserHistory } from 'react-router'
-import SkeletonField from './skeleton-field';
+
 
 
 

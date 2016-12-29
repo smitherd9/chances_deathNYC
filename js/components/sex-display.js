@@ -12,9 +12,14 @@ class SexDisplay extends React.Component {
 
 
 	render() {
+			let sexArray = [];			
+			for (let i = 0; i < this.props.response.length; i++) {			
+				sexArray.push(<p>{this.props.response[i].sex}</p>);				
+								
+			}	
 
 		return(
-			<p className="results">{this.props.sex}</p>
+			<div className="results">{sexArray[0]}</div>
 
 		);
 	}
@@ -25,7 +30,7 @@ class SexDisplay extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	sex: state.response.sex
+	response: state.response
         
     }
 };

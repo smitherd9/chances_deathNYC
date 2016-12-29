@@ -13,8 +13,14 @@ class AgeAdjusted extends React.Component {
 
 	render() {
 
+		let ageAdjustedArray = [];			
+			for (let i = 0; i < this.props.response.length; i++) {			
+				ageAdjustedArray.push(<p>{this.props.response[i].ageAdjusted}</p>);				
+								
+			}	
+
 		return(
-			<p className="results">{this.props.ageAdjusted}</p>
+			<div className="results">{ageAdjustedArray[0]}</div>
 
 		);
 	}
@@ -26,7 +32,7 @@ class AgeAdjusted extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	ageAdjusted: state.response.ageAdjusted
+	response: state.response
         
     }
 };

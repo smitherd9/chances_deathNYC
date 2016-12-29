@@ -16,7 +16,7 @@ var Data = {
 
 app.get('/sex/:sex', function(req, res) {
     req.query.sex = req.params.sex;
-    req.query.$limit = 15;
+    // req.query.$limit = 50;
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
@@ -32,7 +32,7 @@ app.get('/sex/:sex', function(req, res) {
 
 app.get('/ethnicity/:ethnicity', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
-    req.query.$limit = 50;
+    // req.query.$limit = 50;
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
@@ -50,7 +50,7 @@ app.get('/ethnicity/:ethnicity', function(req, res) {
 
 app.get('/year/:year', function(req, res) {
     req.query.year = req.params.year;
-    req.query.$limit = 50;
+    // req.query.$limit = 50;
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
@@ -87,7 +87,7 @@ const storeInData = function(response) {
 
     }
 
-    // finalChancesScore();
+
 
    
 
@@ -95,18 +95,34 @@ const storeInData = function(response) {
 
 
 const finalChancesScore = function() {
-// 	// give score from 1 - 10
 
-    return Data.returnData.reduce(function(accumulator, current, index){
-        if (+current.ageAdjusted > +accumulator.ageAdjusted){
-            return current;
+    Data.returnData.sort(function(a, b){
+        if (+a.ageAdjusted > +b.ageAdjusted) {
+            return -1;
         }
-        else {
-            return accumulator;
+
+        if (+a.ageAdjusted < +b.ageAdjusted){
+            return 1;
         }
+
+        return 0;
+    });
+
+    return Data.returnData;
+
+    // return Data.returnData.slice(0, 4);
+
+
+    // return Data.returnData.reduce(function(accumulator, current, index){
+    //     if (+current.ageAdjusted > +accumulator.ageAdjusted){
+    //         return current;
+    //     }
+    //     else {
+    //         return accumulator;
+    //     }
 
         
-    });
+    // });
 }
 
 // 	for (let i = 0; i < Data.returnData.length; i++) {
