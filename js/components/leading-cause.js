@@ -12,9 +12,13 @@ class LeadingCause extends React.Component {
 
 
 	render() {
-
+		let leadCauseArray = [];			
+			for (let i = 0; i < this.props.response.length; i++) {			
+				leadCauseArray.push(<p>{this.props.response[i].leadingCause}</p>);				
+								
+			}	
 		return(
-			<p className="results">{this.props.leadingCause}</p>
+			<div className="results">{leadCauseArray[0]}</div>
 
 		);
 	}
@@ -25,7 +29,7 @@ class LeadingCause extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	leadingCause: state.response.leadingCause
+	response: state.response
         
     }
 };

@@ -12,9 +12,15 @@ class YearDisplay extends React.Component {
 
 
 	render() {
-
+		
+		let yearArray = [];			
+			for (let i = 0; i < this.props.response.length; i++) {			
+				yearArray.push(<p>{this.props.response[i].year}</p>);				
+								
+			}				
+	
 		return(
-			<p className="results">{this.props.year}</p>
+			<div className="results">{yearArray[0]}</div>
 
 		);
 	}
@@ -25,7 +31,7 @@ class YearDisplay extends React.Component {
 
 let mapStateToProps = (state, props) => {
     return {
-	year: state.response.year
+	response: state.response
         
     }
 };

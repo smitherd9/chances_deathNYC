@@ -8,7 +8,7 @@ import { browserHistory } from 'react-router'
 
 
 
-class Home extends React.Component {
+export default class Home extends React.Component {
 	constructor(props){
 		super(props);		
 	}
@@ -49,13 +49,7 @@ class Home extends React.Component {
 
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        resultsScreen: state.resultsScreen
-    }
-}
 
-export default connect(mapStateToProps)(Home);
 
 
 

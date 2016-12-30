@@ -11,9 +11,6 @@ import Sex from './sex';
 import Year from './year';
 import Display from './display-results';
 import Header from './header';
-import Skull from './skull';
-import WitchHouse from './witch-house';
-import SkeletonField from './skeleton-field';
 import { browserHistory } from 'react-router';
 
 
