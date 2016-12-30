@@ -15,7 +15,7 @@ import { browserHistory } from 'react-router';
 
 
 
-class IntroScreen extends React.Component {
+export default class IntroScreen extends React.Component {
 	constructor(props){
 		super(props);
 		this.hide = this.hide.bind(this);
@@ -60,10 +60,10 @@ class IntroScreen extends React.Component {
 
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        introScreen: state.introScreen
-    }
-}
+// const mapStateToProps = (state, props) => {
+//     return {
+//         introScreen: state.introScreen
+//     }
+// }
 
-export default connect(mapStateToProps)(IntroScreen);
+// export default connect(mapStateToProps)(IntroScreen);

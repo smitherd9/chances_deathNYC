@@ -11,7 +11,7 @@ import { browserHistory } from 'react-router'
 
 
 
-class SearchSection extends React.Component {
+export default class SearchSection extends React.Component {
 	constructor(props){
 		super(props);		
 	}
@@ -44,10 +44,10 @@ class SearchSection extends React.Component {
 
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        resultsScreen: state.resultsScreen
-    }
-}
+// const mapStateToProps = (state, props) => {
+//     return {
+//         resultsScreen: state.resultsScreen
+//     }
+// }
 
-export default connect(mapStateToProps)(SearchSection);
+// export default connect(mapStateToProps)(SearchSection);

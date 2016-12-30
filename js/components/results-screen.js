@@ -13,7 +13,7 @@ import { browserHistory } from 'react-router'
 
 
 
-class ResultsScreen extends React.Component {
+export default class ResultsScreen extends React.Component {
 	constructor(props){
 		super(props);
 		this.hide = this.hide.bind(this);
@@ -50,10 +50,10 @@ class ResultsScreen extends React.Component {
 
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        resultsScreen: state.resultsScreen
-    }
-}
+// const mapStateToProps = (state, props) => {
+//     return {
+//         resultsScreen: state.resultsScreen
+//     }
+// }
 
-export default connect(mapStateToProps)(ResultsScreen);
+// export default connect(mapStateToProps)(ResultsScreen);
