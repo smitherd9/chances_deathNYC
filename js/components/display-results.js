@@ -11,13 +11,18 @@ import Chart from './c3-chart';
 
 
 
-export default class Display extends React.Component {
+class Display extends React.Component {
+	chart;
+
 	constructor(props){
 		super(props);
-
+		this.chart = null;
 	}
 
-
+	componentWillUpdate() {		
+		this.chart = <Chart />;
+		console.log(this.props.response);
+	}
 
 	render() {
 		return (
@@ -49,7 +54,7 @@ export default class Display extends React.Component {
 
 			<Row>
 			<Col md={12}>
-			<Chart />
+			{this.chart}
 			</Col>
 			</Row>
 
@@ -60,6 +65,15 @@ export default class Display extends React.Component {
 	}
 }
 
+
+let mapStateToProps = (state, props) => {
+    return {
+	response: state.response
+        
+    }
+};
+
+export default connect(mapStateToProps)(Display);
 
 
 
