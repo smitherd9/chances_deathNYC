@@ -1,23 +1,25 @@
-# Thinkful React Starter
+# What Are The Chances?  -- Death in NYC
 
-A template for developing React apps.
+What Are The Chances? -- Death in NYC is an app designed to give users 
+an idea of their likely cause of death based on data from NYC's Department of Health 
+and Open Data API.
 
-## Getting started
+## Summary
 
-### Setting up a project
+What Are The Chances? -- Death in NYC searches NYC's Open Data API for 
+data about leading causes of death in the city for the years 
+2007 to 2014.  Users can choose to search for data by
+ethnicity, sex or year.  The app then gets the leading cause
+of death by the highest age adjusted death rate and returns 
+that to the user.  It also generates a C3-js bar chart 
+showing other leading causes of death and their age adjusted
+death rates for the available years.
 
-* Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/oampo/thinkful-react-starter YOUR_PROJECT_NAME`
-* Move into the project directory: `cd YOUR_PROJECT_NAME`
-* Install the dependencies: `npm install`
-* Create a new repo on GitHub: https://github.com/new
-    * Make sure the "Initialize this repository with a README" option is left **un**checked
-* Update the remote to point to your GitHub repository: `git remote set-url origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME`
+## Technologies Used
 
-### Working on the project
+What Are The Chances? --Death in NYC was built using React, Redux, NodeJS, Express, Unirest and C3-js. Body Parser middleware was also used.
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Run the development task: `npm run dev`
-    * Starts a server running at http://localhost:8080
-    * Automatically rebuilds when any of your files change
+Dev dependencies include Chai and Mocha for testing and Travis is used for continuous integration.
+
+
 
