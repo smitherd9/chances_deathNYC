@@ -26,17 +26,18 @@ Dev dependencies include Chai and Mocha for testing and Travis is used for conti
 
 
 #### Intro Screen
-
+![introscreen](https://cloud.githubusercontent.com/assets/17256531/21616303/e8365550-d1ae-11e6-81c9-13e2e1ab39c4.PNG)
 
 
 #### Home Screen
-
+![homescreen](https://cloud.githubusercontent.com/assets/17256531/21616316/f6eb3b88-d1ae-11e6-8fd6-035ce91b70dc.PNG)
 
 
 #### Search Screen
-
+![searchscreen](https://cloud.githubusercontent.com/assets/17256531/21616320/fd1a9652-d1ae-11e6-8995-1c22534ba95c.PNG)
 
 
 #### Results Screen 
+![resultsscreen](https://cloud.githubusercontent.com/assets/17256531/21616325/01371ad0-d1af-11e6-9764-58ab60d49c55.PNG)
 
 
