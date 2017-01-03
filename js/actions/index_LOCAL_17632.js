@@ -91,7 +91,6 @@ const byYearError = (response, err) => {
 const byEthnicity = function(ethnicity) {
     return function(dispatch) {
         var url = new Request('http://localhost:8000/ethnicity/' + ethnicity, 
-
         	{method: 'GET', 
         	headers: {
   				'Accept': 'application/json',

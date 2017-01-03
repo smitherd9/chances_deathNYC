@@ -32,6 +32,7 @@ describe('App Container', () => {
 		let renderer = TestUtils.createRenderer();
 		renderer.render(<AppContainer />);
 		let result = renderer.getRenderOutput();
+<<<<<<< HEAD
 		console.log(result);
 		result.props.className.should.equal('appContainer');
 	});
@@ -79,6 +80,9 @@ describe('SearchSection', () => {
 		let result = renderer.getRenderOutput();
 		result.props.className.should.equal('search');
 		// result.props.className.should.equal('searchSection');
+=======
+		result.props.className.should.equal('container');
+>>>>>>> 70b4acbe1544ffdbb7a769c37c0453489caf3e95
 	});
 
 });

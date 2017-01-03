@@ -90,8 +90,11 @@ const byYearError = (response, err) => {
 
 const byEthnicity = function(ethnicity) {
     return function(dispatch) {
+<<<<<<< HEAD
         var url = new Request('http://localhost:8000/ethnicity/' + ethnicity, 
-
+=======
+        var url = new Request('https://tranquil-basin-74006.herokuapp.com/ethnicity' + ethnicity, 
+>>>>>>> 70b4acbe1544ffdbb7a769c37c0453489caf3e95
         	{method: 'GET', 
         	headers: {
   				'Accept': 'application/json',
@@ -125,7 +128,11 @@ const byEthnicity = function(ethnicity) {
 
 const bySex = function(sex) {
     return function(dispatch) {
+<<<<<<< HEAD
         var url = new Request('http://localhost:8000/sex/' + sex, 
+=======
+        var url = new Request('https://tranquil-basin-74006.herokuapp.com/sex' + sex, 
+>>>>>>> 70b4acbe1544ffdbb7a769c37c0453489caf3e95
         	{method: 'GET', 
         	headers: {
   				'Accept': 'application/json',
