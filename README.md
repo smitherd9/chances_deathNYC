@@ -17,9 +17,26 @@ death rates for the available years.
 
 ## Technologies Used
 
-What Are The Chances? --Death in NYC was built using React, Redux, NodeJS, Express, Unirest and C3-js. Body Parser middleware was also used.
+What Are The Chances? --Death in NYC was built using React, Redux, React Router, NodeJS, Express, Unirest and C3-js. Body Parser middleware was also used.
 
 Dev dependencies include Chai and Mocha for testing and Travis is used for continuous integration.
 
+
+## Screenshots
+
+
+#### Intro Screen
+
+
+
+#### Home Screen
+
+
+
+#### Search Screen
+
+
+
+#### Results Screen 
 
 

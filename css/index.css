@@ -12,26 +12,9 @@ body {
     overflow: auto;
 }
 
-/*#app {
-	background: url(../img/skeleton-field.jpg) no-repeat center center fixed;
-    background-size: cover;    
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}*/
-
-
-
-/*.jumbotron {
-	background: url(../img/brooklyn-bridge-bw.jpg);
-	padding-top: 25px;
-	width: 100%;
-	height: 50em;
-}*/
-
 #chart {
 	background-color: white;
-	margin-top: 5em;
+	margin-top: 7em;
 }
 
 
@@ -79,8 +62,7 @@ h2 {
 
 .intro .title {
 	font-family: "Shrikhand", cursive;
-	color: #CC0000;
-	/*color: #8c1c29;*/
+	color: #CC0000;	
 	float: left;
 }
 
