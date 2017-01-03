@@ -97,23 +97,13 @@ class Chart extends React.Component {
 
       	};
 
-    // componentWillMount(){
-    // 	this.renderChart(this.chart.data);
-    // }
-      
-
-    componentWillReceiveProps(nextProps){
-    	if (this.props !== nextProps){
-
-    	}
-    }
 
 	componentWillUpdate(){
-		// store.dispatch(actions.selectedState(e.target.value));
+		
 		console.log(this.props.response);
-		// this.renderChart(this.props.response);
+		
 
-		let  data = {
+		let data = {
             x: 'x',
             columns: [],
             type: 'bar'
@@ -158,8 +148,7 @@ class Chart extends React.Component {
 
 	
 
-	render() {
-		// console.log('this.ageAdjusted: ' + this.ageAdjusted);
+	render() {	
 
 		return(	
 			

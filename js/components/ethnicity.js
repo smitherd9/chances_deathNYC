@@ -3,7 +3,7 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button, FormGroup, FormControl, Radio, Checkbox, DropdownButton, MenuItem, Grid, Row, Col } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, Radio, Grid, Row, Col } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 
 
@@ -32,8 +32,7 @@ class Ethnicity extends React.Component {
 		store.dispatch(actions.selectedState(e.target.value));
 	}
 
-	showResults() {
-		store.dispatch(actions.showResults(true));
+	showResults() {		
 		browserHistory.push('/results');
 	}
 

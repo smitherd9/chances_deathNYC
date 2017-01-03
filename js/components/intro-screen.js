@@ -1,15 +1,6 @@
 import React from 'react';
 import actions from '../actions/index';
-import store from '../store';
-import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
-import { Grid } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import Ethnicity from './ethnicity';
-import Sex from './sex';
-import Year from './year';
-import Display from './display-results';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 import Header from './header';
 import { browserHistory } from 'react-router';
 
@@ -21,8 +12,7 @@ export default class IntroScreen extends React.Component {
 		this.hide = this.hide.bind(this);
 	}
 
-	hide() {
-		store.dispatch(actions.introScreen(false));
+	hide() {		
 		browserHistory.push('/app');
 	}
 
@@ -60,10 +50,3 @@ export default class IntroScreen extends React.Component {
 
 }
 
-// const mapStateToProps = (state, props) => {
-//     return {
-//         introScreen: state.introScreen
-//     }
-// }
-
-// export default connect(mapStateToProps)(IntroScreen);

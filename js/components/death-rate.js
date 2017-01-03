@@ -11,23 +11,6 @@ class DeathRate extends React.Component {
 
 	}
 
-	componentWillUpdate(){
-		console.log('this.props will update: ' + this.props.deathRate);
-		console.log('this.state will update: ' + this.state);
-	}
-
-	componentDidUpdate(){
-		console.log('this.props: ' + this.props.deathRate);
-		console.log('this.state did update: ' + this.state);
-	}
-
-	componentWillReceiveProps(nextProps) {
-		console.log('this.props will receive: ' + this.props.deathRate);
-	}
-
-
-
-
 	render() {
 
 		let deathRateArray = [];			

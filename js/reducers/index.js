@@ -6,9 +6,7 @@ const initialState = {
 	response: [],
 	selectedEthnicity: "",
 	selectedSex: "",
-    selectedYear: "",
-    introScreen: true,
-    resultsScreen: false
+    selectedYear: ""  
 }
 
 
@@ -75,35 +73,6 @@ const DeathReducer = function(state, action) {
 
         });
     }
-
-    if (action.type === actions.INTRO) {
-
-        return Object.assign({}, state, {       
-            
-            introScreen: false
-
-        });
-    }
-
-    if (action.type === actions.RESULTS) {
-
-        return Object.assign({}, state, {       
-            
-            resultsScreen: true
-
-        });
-    }
-
-    if (action.type === actions.HIDE_RESULTS) {
-
-        return Object.assign({}, state, {       
-            
-            resultsScreen: false
-
-        });
-    }
-
-
 
  return state;
 

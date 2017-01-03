@@ -1,12 +1,6 @@
 import React from 'react';
-import actions from '../actions/index';
-import store from '../store';
-import { connect } from 'react-redux';
 import { Grid, Row, Col } from 'react-bootstrap';
-// import Ethnicity from './ethnicity';
-// import Sex from './sex';
-// import Year from './year';
-import SearchSection from './search-section';
+
 
 
 export default class Header extends React.Component {

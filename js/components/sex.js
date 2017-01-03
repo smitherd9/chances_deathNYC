@@ -15,8 +15,7 @@ class Sex extends React.Component {
 	constructor(props){
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
-		this.showResults = this.showResults.bind(this);
-		// this.selectedState = this.selectedState.bind(this);
+		this.showResults = this.showResults.bind(this);		
 
 	}
 
@@ -36,16 +35,8 @@ class Sex extends React.Component {
 		store.dispatch(actions.selectedSex(e.target.value));
 	}
 
-	showResults() {
-		store.dispatch(actions.showResults(true));
+	showResults() {		
 		browserHistory.push('/results');
-	}
-
-	componentWillUpdate(nextProps, nextState) {
-		if (nextProps.response == true) {
-			console.log('this.nextProps will update sex.js: ' + nextProps);
-		}
-		
 	}
 
 	componentDidUpdate() {

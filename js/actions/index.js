@@ -86,32 +86,6 @@ const byYearError = (response, err) => {
 }
 
 
-const INTRO = 'INTRO';
-const introScreen = () => {
-    return {
-        type: INTRO
-        
-    }
-}
-
-
-const RESULTS = 'RESULTS';
-const showResults = () => {
-    return {
-        type: RESULTS
-        
-    }
-}
-
-const HIDE_RESULTS = 'HIDE_RESULTS';
-const hideResults = () => {
-    return {
-        type: HIDE_RESULTS
-        
-    }
-}
-
-
 // Action Creators 
 
 const byEthnicity = function(ethnicity) {
@@ -241,15 +215,3 @@ exports.byYearSuccess = byYearSuccess;
 exports.YEAR_ERR = YEAR_ERR;
 exports.byYearError = byYearError;
 exports.byYear = byYear;
-
-
-exports.INTRO = INTRO;
-exports.introScreen = introScreen;
-
-exports.RESULTS = RESULTS;
-exports.showResults = showResults;
-
-exports.HIDE_RESULTS = HIDE_RESULTS;
-exports.hideResults = hideResults;
-
-

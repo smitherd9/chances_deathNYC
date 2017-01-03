@@ -1,7 +1,5 @@
 import React from 'react';
 import actions from '../actions/index';
-import store from '../store';
-import { connect } from 'react-redux';
 import { Button, Grid, Row, Col } from 'react-bootstrap';
 import { browserHistory } from 'react-router'
 

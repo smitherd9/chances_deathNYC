@@ -1,13 +1,7 @@
 import React from 'react';
 import actions from '../actions/index';
-import store from '../store';
-import { connect } from 'react-redux';
 import { Button, Grid, Row, Col } from 'react-bootstrap';
-import Ethnicity from './ethnicity';
-import Sex from './sex';
-import Year from './year';
 import Display from './display-results';
-import Header from './header';
 import { browserHistory } from 'react-router'
 
 
@@ -19,8 +13,7 @@ export default class ResultsScreen extends React.Component {
 		this.hide = this.hide.bind(this);
 	}
 
-	hide() {
-		store.dispatch(actions.hideResults(false));
+	hide() {		
 		browserHistory.push('/app/search');
 	}
 
@@ -50,10 +43,3 @@ export default class ResultsScreen extends React.Component {
 
 }
 
-// const mapStateToProps = (state, props) => {
-//     return {
-//         resultsScreen: state.resultsScreen
-//     }
-// }
-
-// export default connect(mapStateToProps)(ResultsScreen);

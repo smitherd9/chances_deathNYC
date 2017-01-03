@@ -32,16 +32,8 @@ class Year extends React.Component {
 		store.dispatch(actions.selectedYear(e.target.value));
 	}
 
-	showResults() {
-		store.dispatch(actions.showResults(true));
+	showResults() {		
 		browserHistory.push('/results');
-	}
-
-	componentWillUpdate(nextProps, nextState) {
-		if (nextProps.response == true) {
-			console.log('this.nextProps will update year.js: ' + nextProps);
-		}
-		
 	}
 
 	componentDidUpdate() {
