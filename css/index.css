@@ -94,12 +94,18 @@ h2 {
 	right: 50%;
 }
 
+.enter:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+
 .clickEnter {
 	background: rgba(0, 0, 0, 0.75);
 	position: absolute;
 	top: 70%;
 	margin: 0 auto;
-	margin-left: 12em;
+	margin-left: 15.5em;
 	color: #CC0000;
 
 }
@@ -110,8 +116,7 @@ h2 {
 	width: 10em;
 	border-radius: 2em;
 	display: inline-block;
-	margin: auto 0;
-	margin-left: 15em;
+	margin: auto 0;	
 }
 
 
@@ -137,16 +142,31 @@ h2 {
 	right: 50%;
 }
 
-.close {
+.closeButton {
 	position: absolute;
 	top: 50%;
 	right: 50%;
-	color: white !important;
-	background-color: blue !important ;
-	font-family: 'Creepster', cursive !important;
-	font-size: 24px !important ;
-}
+	margin-left: 50%;
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
 
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;	
+	font-family: "Creepster", cursive;
+	font-size:17px;
+	font-weight:bold;	
+	text-decoration:none;	
+}
+.closeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
 
 
 .appContainer {
@@ -166,6 +186,14 @@ h2 {
 
 #appContainerButton {
 	margin-left: 10em;
+	cursor:pointer;	
+	font-family: "Creepster", cursive;
+}
+
+#appContainerButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
 }
 
 
@@ -181,9 +209,7 @@ h2 {
 	margin-left: 4em;
 }
 
-/*.resultsSection {
-	margin-top: 10em;
-}*/
+
 
 .shadow {
 	background: rgba(0, 0, 0, 0.75);

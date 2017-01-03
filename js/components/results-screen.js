@@ -29,7 +29,7 @@ export default class ResultsScreen extends React.Component {
 			<Col md={12}><Display /></Col>
 
 			<div className="closeResultsButton">	
-			<Button className="close" bsSize="large" type="button" onClick={this.hide} active>Search Again</Button>	
+			<Button className="closeButton" bsSize="large" type="button" onClick={this.hide} active>Search Again</Button>	
 			</div>
 			</Row>
 			</section>
