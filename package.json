@@ -1,7 +1,7 @@
 {
   "name": "chances_death-in-nyc",
   "version": "0.0.1",
-  "description": "An app to determine the user's probability of type of death based on health services data from 2007 to today.",
+  "description": "An app to determine the user's probability of type of death based on health services data from 2007 to 2014.",
   "main": "js/index.js",
   "scripts": {
     "start": "npm run build && node server.js",
