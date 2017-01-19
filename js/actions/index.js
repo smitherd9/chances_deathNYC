@@ -90,7 +90,7 @@ const byYearError = (response, err) => {
 
 const byEthnicity = function(ethnicity) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/ethnicity/' + ethnicity, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/ethnicity/' + ethnicity, 
 
         	{method: 'GET', 
         	headers: {
@@ -125,7 +125,7 @@ const byEthnicity = function(ethnicity) {
 
 const bySex = function(sex) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/sex/' + sex, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/sex/' + sex, 
         	{method: 'GET', 
         	headers: {
   				'Accept': 'application/json',
@@ -160,7 +160,7 @@ const bySex = function(sex) {
 
 const byYear = function(year) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/year/' + year, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/year/' + year, 
             {method: 'GET', 
             headers: {
                 'Accept': 'application/json',
