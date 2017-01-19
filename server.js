@@ -8,7 +8,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-var Data = {    
+var Data = {
+    chancesRating: 0,
     returnData: []
 };
 
