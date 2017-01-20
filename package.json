@@ -4,7 +4,7 @@
   "description": "An app to determine the user's probability of type of death based on health services data from 2007 to 2014.",
   "main": "js/index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "http-server -c-1 build",
     "dev": "run-p watch serve",
     "test": "jest",
     "build": "npm run build:html && npm run build:js && npm run build:css && npm run build:assets && npm run build:img",
@@ -43,7 +43,8 @@
     "watch:assets": "run-s build:assets _watch:assets",
     "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\"",
     "build:server": "rimraf web && mkdirp web && mkdirp web/public && cpr build web/public -r && cpr server.js web/server.js -o && cpr package.json web/package.json -o",
-    "deploy":"git subtree push --prefix web heroku master"
+    "deploy":"git push heroku `git subtree split --prefix web master`:master --force"
+    
   },
   "author": "Daniel Smither <smitherd9@gmail.com>",
   "license": "UNLICENSED",
