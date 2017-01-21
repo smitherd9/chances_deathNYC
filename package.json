@@ -4,7 +4,7 @@
   "description": "An app to determine the user's probability of type of death based on health services data from 2007 to 2014.",
   "main": "js/index.js",
   "scripts": {
-    "start": "http-server -c-1 build",
+    "start": "node server.js",
     "dev": "run-p watch serve",
     "test": "jest",
     "build": "npm run build:html && npm run build:js && npm run build:css && npm run build:assets && npm run build:img",
