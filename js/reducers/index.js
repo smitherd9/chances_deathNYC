@@ -6,7 +6,8 @@ const initialState = {
 	response: [],
 	selectedEthnicity: "Search by Ethnicity",
 	selectedSex: "Search by Sex",
-    selectedYear: "Search by Year"  
+    selectedYear: "Search by Year",
+    showAboutModal: false  
 }
 
 
@@ -72,6 +73,25 @@ const DeathReducer = function(state, action) {
         return Object.assign({}, state, {       
             
             response: action.response
+
+        });
+    }
+
+    if (action.type === actions.SHOW_ABOUT_MODAL) {
+
+        return Object.assign({}, state, {       
+            
+            showAboutModal: true
+
+        });
+    }
+
+
+    if (action.type === actions.CLOSE_ABOUT_MODAL) {
+
+        return Object.assign({}, state, {       
+            
+            showAboutModal: false
 
         });
     }

@@ -85,6 +85,22 @@ const byYearError = (response, err) => {
     }
 }
 
+const SHOW_ABOUT_MODAL = 'SHOW_ABOUT_MODAL';
+const showAboutModal = () => {
+    return {
+        type: SHOW_ABOUT_MODAL
+        
+    }
+}
+
+const CLOSE_ABOUT_MODAL = 'CLOSE_ABOUT_MODAL';
+const closeAboutModal = () => {
+    return {
+        type: CLOSE_ABOUT_MODAL
+        
+    }
+}
+
 
 // Action Creators 
 
@@ -202,7 +218,7 @@ exports.byEthnicity = byEthnicity;
 
 
 exports.SELECTED_SEX = SELECTED_SEX;
-exports. selectedSex = selectedSex;
+exports.selectedSex = selectedSex;
 exports.SEX = SEX;
 exports.bySexSuccess = bySexSuccess;
 exports.SEX_ERR = SEX_ERR;
@@ -216,3 +232,9 @@ exports.byYearSuccess = byYearSuccess;
 exports.YEAR_ERR = YEAR_ERR;
 exports.byYearError = byYearError;
 exports.byYear = byYear;
+
+exports.SHOW_ABOUT_MODAL = SHOW_ABOUT_MODAL;
+exports.showAboutModal = showAboutModal;
+
+exports.CLOSE_ABOUT_MODAL = CLOSE_ABOUT_MODAL;
+exports.closeAboutModal = closeAboutModal;

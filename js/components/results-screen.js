@@ -1,6 +1,6 @@
 import React from 'react';
 import actions from '../actions/index';
-import { Button, Grid, Row, Col } from 'react-bootstrap';
+import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import Display from './display-results';
 import { browserHistory } from 'react-router'
 
@@ -14,7 +14,7 @@ export default class ResultsScreen extends React.Component {
 	}
 
 	hide() {		
-		browserHistory.push('/app/search');
+		browserHistory.push('/search');
 	}
 
 
@@ -24,15 +24,21 @@ export default class ResultsScreen extends React.Component {
 		
 		return (
 			<div className="resultsScreen">
+			<Jumbotron>
 			<section className="resultsSection">
 			<Row className="searchRow">
 			<Col md={12}><Display /></Col>
+			</Row>
 
 			<div className="closeResultsButton">	
 			<Button className="closeButton" bsSize="large" type="button" onClick={this.hide} active>Search Again</Button>	
 			</div>
-			</Row>
+
+
+			
 			</section>
+			</Jumbotron>
+			<div className="arrow-down"></div>
 			
 			
 			</div>

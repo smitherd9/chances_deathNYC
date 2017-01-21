@@ -18,16 +18,15 @@ import Chart from './components/c3-chart';
 
 render(<Provider store={store}>
 		<Router history={browserHistory}>
-			<Route path="/app" component={AppContainer} >
+			<Route path="/" component={AppContainer} >
 				<IndexRoute component={Home} ></IndexRoute>
-				<Route path="/app/search" component={SearchSection} ></Route>
+				<Route path="/search" component={SearchSection} ></Route>
 				<Route path="/results" component={ResultsScreen} ></Route>
 				<Route path="/results" component={Chart} ></Route>
 			</Route>
 
 
-			<Route path="/" component={IntroScreen} >				
-			</Route>
+
 		
         </Router>
         </Provider>, document.getElementById('app'));

@@ -1,6 +1,6 @@
 import React from 'react';
 import actions from '../actions/index';
-import { Button, Grid, Row, Col } from 'react-bootstrap';
+import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import Ethnicity from './ethnicity';
 import Sex from './sex';
 import Year from './year';
@@ -23,7 +23,7 @@ export default class SearchSection extends React.Component {
 		
 		return (
 			<div className="search">
-			
+			<Jumbotron>
 			<section className="searchSection">
 			<Row className="searchRow">
 				<Col md={4}><Ethnicity /></Col>
@@ -32,6 +32,7 @@ export default class SearchSection extends React.Component {
 			</Row>
 			
 			</section>
+			</Jumbotron>
 			
 			
 			</div>
