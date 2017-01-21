@@ -1,10 +1,10 @@
 
 // Searching by Ethnicity 
 
-const SELECTED_STATE = 'SELECTED_STATE';
-const selectedState = (selected) => {
+const SELECTED_ETHNICITY = 'SELECTED_ETHNICITY';
+const selectedEthnicity = (selected) => {
 	return {
-		type: SELECTED_STATE,
+		type: SELECTED_ETHNICITY,
 		selectedEthnicity: selected
 	}
 }
@@ -192,8 +192,8 @@ const byYear = function(year) {
 };
 
 
-exports.SELECTED_STATE = SELECTED_STATE;
-exports.selectedState = selectedState;
+exports.SELECTED_ETHNICITY = SELECTED_ETHNICITY;
+exports.selectedEthnicity = selectedEthnicity;
 exports.ETHNICITY = ETHNICITY;
 exports.byEthnicitySuccess = byEthnicitySuccess;
 exports.ETHNICITY_ERR = ETHNICITY_ERR;

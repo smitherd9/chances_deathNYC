@@ -4,7 +4,7 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button, FormGroup, FormControl, Radio } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, SplitButton, MenuItem } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 
 
@@ -28,11 +28,9 @@ class Sex extends React.Component {
 		this.showResults();
 	}
 
-	selectedState(e){
-		e.preventDefault();
-		console.log(typeof(e.target.value));
-		console.log(e.target.value);
-		store.dispatch(actions.selectedSex(e.target.value));
+	selectedState(eventKey, event){
+		event.preventDefault();
+		store.dispatch(actions.selectedSex(eventKey));
 	}
 
 	showResults() {		
@@ -48,31 +46,24 @@ class Sex extends React.Component {
 	render() {
 		console.log(this.props);
 		return (
-		<div>
+		
 
 		<div className="shadow">
 		<h3>Search by Sex</h3>
 		<form>
 		<FormGroup>
 
-		<Radio
-			value="M"
-			onClick={this.selectedState}
-		>
-		<p>Male</p> 		
-		</Radio>
-		<Radio
-			value="F"
-			onClick={this.selectedState}
-		>
-		<p>Female</p> 		
-		</Radio>
+		<SplitButton title={this.props.selectedSex} toggleLabel="Search by Sex" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+			<MenuItem eventKey="M">Male</MenuItem>
+    		<MenuItem eventKey="F">Female</MenuItem>
+    	</SplitButton>
+
 		</FormGroup>
 		<Button bsStyle="primary" bsSize="large"  type="button" onClick={this.handleClick}>Go!</Button>
 		</form>
 		</div>		
 		
-		</div>
+		
 
 		);
 	}

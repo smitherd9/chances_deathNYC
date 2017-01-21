@@ -31,7 +31,7 @@ export default class Home extends React.Component {
 				</div>
 				</Col>
 				<Col md={6}>			
-				<div id="appContainerScreen" className="skeletonField"><img src="../../img/skeleton-field.jpg/" /></div>
+				<div id="appContainerScreen" className="skeletonField"><img src="../../img/skeleton-field.jpg" /></div>
 				</Col>
 
 			</Row>

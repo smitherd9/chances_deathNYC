@@ -4,9 +4,9 @@ import { combineReducers, createStore } from 'redux';
 
 const initialState = {
 	response: [],
-	selectedEthnicity: "",
-	selectedSex: "",
-    selectedYear: ""  
+	selectedEthnicity: "Search by Ethnicity",
+	selectedSex: "Search by Sex",
+    selectedYear: "Search by Year"  
 }
 
 
@@ -18,6 +18,14 @@ const initialState = {
 const DeathReducer = function(state, action) {    
     state = state || initialState;
 
+    if (action.type === actions.SELECTED_ETHNICITY) {
+
+        return Object.assign({}, state, {            
+            selectedEthnicity: action.selectedEthnicity
+           
+
+        });
+
     if (action.type === actions.ETHNICITY) {
 
     	return Object.assign({}, state, {
@@ -28,13 +36,7 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.SELECTED_STATE) {
 
-    	return Object.assign({}, state, {            
-            selectedEthnicity: action.selectedEthnicity
-           
-
-        });
     }
 
     if (action.type === actions.SELECTED_SEX) {
