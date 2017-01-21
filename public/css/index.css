@@ -22,6 +22,7 @@ body {
 	font-family: "Shrikhand", cursive;
 	color: #CC0000;	
 	float: left;
+	padding-left: 1.43em;
 }
 
 .title .creepster {
@@ -164,12 +165,12 @@ h2 {
 
 #appContainerScreen {
 	float: right;
-	margin-top: 7em;
-	margin-right: 5em;
+	margin-top: 5em;
+	margin-right: 7em;
 }
 
 #appContainerButton {
-	margin-left: 10em;
+	margin-left: 15em;
 	cursor:pointer;	
 	font-family: "Creepster", cursive;
 }
@@ -205,7 +206,7 @@ h2 {
 
 .shadow-oracle {
 	background: rgba(0, 0, 0, 0.75);
-	margin-left: 3em;
+	margin-left: 7em;
 	margin-top: 5em;
 	padding: 1em;
 	width: 30em;
@@ -238,7 +239,8 @@ h2 {
 .skeletonField img {	
 	background: rgba(0, 0, 0, 0.75);
 	padding: 1em;
-	width: 30em;
+	height: 18em;
+	width: 25em;
 	border-radius: 2em;
 	display: inline-block;
 }
