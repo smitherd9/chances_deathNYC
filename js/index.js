@@ -9,7 +9,6 @@ import store from './store';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 import { Grid, Row, Col } from 'react-bootstrap';
 import AppContainer from './components/app-container';
-import IntroScreen from './components/intro-screen';
 import ResultsScreen from './components/results-screen';
 import SearchSection from './components/search-section';
 import Home from './components/home';

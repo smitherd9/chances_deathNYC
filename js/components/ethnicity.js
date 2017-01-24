@@ -24,6 +24,8 @@ class Ethnicity extends React.Component {
 		store.dispatch(actions.byEthnicity(store.getState().selectedEthnicity));
 		console.log(store.getState());
 		this.showResults();
+		console.log('selected: ' + store.getState().selectedEthnicity);
+		// console.log('typeOf: ' + typeof(store.getState().selectedEthnicity);
 	}
 
 	selectedState(eventKey, event){
@@ -37,6 +39,7 @@ class Ethnicity extends React.Component {
 
 	componentDidUpdate(){
 		<Display />
+		// store.dispatch(actions.selectedEthnicityDefault());
 	}
 
 	render() {
