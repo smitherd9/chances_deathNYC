@@ -4,49 +4,87 @@
 
 
 
-body {
+/*body {
     height: 100%;
     overflow: auto;
 }
-
+*/
 
 
 /*Navigation*/
 
 .navbar {
 	height: 9.8em;
+	text-align: center;
+	border: none;
+	margin: 0;
 }
 
 
 .navbar-default {
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: transparent;
 }
 
+.navbar-header {
+	float: none;
 
+}
 
-.title {
+.navbar-brand {
+	float: none;
+	cursor: pointer;
+}
+
+.navbar-brand h1 {
 	font-family: "Shrikhand", cursive;
-	color: #CC0000;	
-	float: left;	
+	font-size: 36px;
+	color: #CC0000;
 }
 
-.title .creepster {
-	font-family: "Creepster", cursive !important; 
-	color: red;
+.navbar-brand small {
+	font-family: "Shrikhand", cursive;
 	font-size: 24px;
-	font-weight: bold;
+	color: #CC0000;
 }
 
+.header-container {
+	box-shadow: -20px 11px 12px black;
+}
+
+.page-header {
+	border: none;
+	text-align: center;
+	margin-top: 20px;
+	cursor: pointer;
+
+}
+
+
+
+.title > h1 {
+	font-family: "Shrikhand", cursive;
+	font-size: 36px;
+	color: #CC0000;	
+		
+}
+
+.about {
+	font-family: "Shrikhand", cursive;
+	font-size: 32px;
+	color: #CC0000;
+	margin-top: 1em;	
+
+}
 
 
 p {
-	font-family: "Shrikhand", cursive;
+	font-family: "Montserrat", sans-serif;
 	color: white;
 }
 
 h3 {
 	font-family: "Shrikhand", cursive;
-	color: #2e8dfb;
+	color: #CC0000;
     text-decoration: underline;
 }
 
@@ -56,26 +94,6 @@ h2 {
 }
 
 
-/* Intro Screen */
-
-.intro {
-	background: url(../img/witch-house.jpg) no-repeat center center fixed;
-    background-size: cover;    
-    width: 100%;
-    height: 100%;    
-    position: absolute;
-}
-
-.intro .title {
-	font-family: "Shrikhand", cursive;
-	color: #CC0000;	
-	float: left;
-	padding-left: 1.43em;
-}
-
-.introButton {
-	text-align: center;
-}
 
 .enter {
 	position: absolute;
@@ -127,7 +145,7 @@ h2 {
 
 }
 
-.resultsScreen .title {
+.resultsScreen  {
 	font-family: "Shrikhand", cursive;
 	color: #CC0000;	
 	float: left;
@@ -154,7 +172,7 @@ h2 {
 	border-radius:5px;	
 	display:inline-block;
 	cursor:pointer;	
-	font-family: "Creepster", cursive;
+	font-family: "Montserrat", sans-serif;
 	font-size:17px;
 	font-weight:bold;	
 		
@@ -175,15 +193,11 @@ h2 {
 }
 
 
-.jumbotron {
-	background: url(../img/brooklyn-bridge-bw.jpg);
-    background-size: cover;
-    height: 55em;
-    margin-bottom: 0;
-}
 
 .appContainer {
-	background-color: gray;
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000000 , #434343);
     height: 100%;    
     width: 100%;    
 }
@@ -210,10 +224,10 @@ h2 {
 
 
 
-.container {	
+/*.container {	
 	width: 100%;
 
-}
+}*/
 
 .searchSection {
 	margin-top: 10em;
@@ -279,22 +293,19 @@ h2 {
 	padding: 0.1em 0.1em 0.1em 1.3em;
 }
 
-.skull {
-	width: 15em;
-	height: 10em;
-	margin: 0 auto;
-	
-}
+
 
 .skull img {
 	border-radius: 50%;
-	width: 7em;
-	height: 7em;	
+	width: 3.5em;
+	height: 3.5em;	
 	padding: 3px;
 	background-color: white;
-	float: right;
+	text-align: center;
 
 }
+
+
 
 
 /*Modal Styles*/
@@ -319,6 +330,17 @@ h2 {
 
 .modal-footer {
 	background-color: floralwhite;
+}
+
+
+
+.footer {
+	position: absolute;	
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	padding-top: 1em;
+
 }
 
 
