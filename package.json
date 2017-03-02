@@ -45,11 +45,9 @@
     "watch:assets": "run-s build:assets _watch:assets",
     "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\"",
     "build:server": "rimraf public && mkdirp public && cpr build public -r",
-    "commit":"git add public/* && git commit -m \"Commit public folder for heroku\"",
-    "push":"git push heroku master",
-    "deploy":"npm run build && npm run build:server && npm run commit && npm run push"
-  
-    
+    "commit": "git add public/* && git commit -m \"Commit public folder for heroku\"",
+    "push": "git push heroku master",
+    "deploy": "npm run build && npm run build:server && npm run commit && npm run push"
   },
   "author": "Daniel Smither <smitherd9@gmail.com>",
   "license": "UNLICENSED",
@@ -100,8 +98,7 @@
     "react-router": "^3.0.0",
     "react-select-box": "^3.0.1",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0"
-
+    "redux-thunk": "^2.1.0",
+    "unirest": "^0.5.1"
   }
 }
-                
