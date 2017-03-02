@@ -32,7 +32,7 @@ export default class Footer extends React.Component {
                     <i className="fa fa-github fa-2x hvr-grow-rotate" aria-hidden="true"></i>
                     	</a>
                     </p>
-                    <a href="https://smitherd9.github.io">
+                    <a href="https://smitherd9.github.io" target="_blank">
                     Daniel Smither
                     </a>
                 </span>
