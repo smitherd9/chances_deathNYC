@@ -62,7 +62,7 @@ class Year extends React.Component {
     	</SplitButton>
 
 		</FormGroup>
-		<Button bsStyle="primary" bsSize="large"  type="button" onClick={this.handleClick}>Go!</Button>
+		<Button bsStyle="primary" bsSize="large" className="goButton"  type="button" onClick={this.handleClick}>Go!</Button>
 		</form>
 		</div>		
 		
