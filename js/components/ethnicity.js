@@ -38,7 +38,7 @@ class Ethnicity extends React.Component {
 	}
 
 	componentDidUpdate(){
-		<Display />
+		
 		// store.dispatch(actions.selectedEthnicityDefault());
 	}
 

@@ -35,7 +35,7 @@ class Year extends React.Component {
 	}
 
 	componentDidUpdate() {
-		<Display />
+		
 		
 	}
 

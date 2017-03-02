@@ -23,7 +23,7 @@ export default class SearchSection extends React.Component {
 		
 		return (
 			<div className="search">
-			<Jumbotron>
+			
 			<section className="searchSection">
 			<Row className="searchRow">
 				<Col md={4}><Ethnicity /></Col>
@@ -32,7 +32,7 @@ export default class SearchSection extends React.Component {
 			</Row>
 			
 			</section>
-			</Jumbotron>
+			
 			
 			
 			</div>

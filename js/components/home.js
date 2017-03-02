@@ -1,7 +1,8 @@
 import React from 'react';
 import actions from '../actions/index';
 import { Button, Jumbotron, Grid, Row, Col } from 'react-bootstrap';
-import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router';
+import About from './about-logo';
 
 
 
@@ -18,27 +19,28 @@ export default class Home extends React.Component {
 	render() {
 		
 		
-		return (
-		<div className="homeSection">
-			<Jumbotron>
-				<Row className="homeScreen">
-				<div className="shadow-oracle">
-					<h3>Welcome! <br/> 
-					<br />
-					I am the all-seeing oracle of New York!</h3>
-					<p>Give me a little information about yourself, and I will query the
-						data gods for leading causes of death in the city!</p>
-				</div>
+		return (	
+			
 		
-				<div id="appContainerScreen" className="skeletonField"><img src="../../img/skeleton-field.jpg" /></div>
-				
-				</Row>
+		<div className="homeSection">
+
+			<Row className="askOracle">
+				<h3>Ask the Oracle!</h3>
+				<p>Curious about leading causes of death in NYC?</p>
+				<p>With a little information about yourself, I will query for NYC government data.</p>
+			</Row>
+
+			<Row className="homeScreen">		
+				<div id="appContainerScreen" className="skeletonField">
+					<img src="../../img/skeleton-field.jpg" />
+				</div>				
+			</Row>
 			
 
-			<Row>
+			<Row className="click-to-enter">
 			<Button id="appContainerButton" onClick={this.handleClick}>Click to search for your fate!</Button>
 			</Row>
-			</Jumbotron>
+			
 		</div>
 			
 	   );

@@ -4,49 +4,87 @@
 
 
 
-body {
+/*body {
     height: 100%;
     overflow: auto;
 }
-
+*/
 
 
 /*Navigation*/
 
 .navbar {
 	height: 9.8em;
+	text-align: center;
+	border: none;
+	margin: 0;
 }
 
 
 .navbar-default {
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: transparent;
 }
 
+.navbar-header {
+	float: none;
 
+}
 
-.title {
+.navbar-brand {
+	float: none;
+	cursor: pointer;
+}
+
+.navbar-brand h1 {
 	font-family: "Shrikhand", cursive;
-	color: #CC0000;	
-	float: left;	
+	font-size: 36px;
+	color: #CC0000;
 }
 
-.title .creepster {
-	font-family: "Creepster", cursive !important; 
-	color: red;
+.navbar-brand small {
+	font-family: "Shrikhand", cursive;
 	font-size: 24px;
-	font-weight: bold;
+	color: #CC0000;
 }
 
+.header-container {
+	box-shadow: -20px 11px 12px black;
+}
+
+.page-header {
+	border: none;
+	text-align: center;
+	margin-top: 20px;
+	cursor: pointer;
+
+}
+
+
+
+.title > h1 {
+	font-family: "Shrikhand", cursive;
+	font-size: 36px;
+	color: #CC0000;	
+		
+}
+
+.about {
+	font-family: "Shrikhand", cursive;
+	font-size: 32px;
+	color: #CC0000;
+	margin-top: 1em;	
+
+}
 
 
 p {
-	font-family: "Shrikhand", cursive;
+	font-family: "Montserrat", sans-serif;
 	color: white;
 }
 
 h3 {
 	font-family: "Shrikhand", cursive;
-	color: #2e8dfb;
+	color: #CC0000;
     text-decoration: underline;
 }
 
@@ -56,28 +94,12 @@ h2 {
 }
 
 
-/* Intro Screen */
-
-.intro {
-	background: url(../img/witch-house.jpg) no-repeat center center fixed;
-    background-size: cover;    
-    width: 100%;
-    height: 100%;    
-    position: absolute;
+span > p {
+	margin: 0 0 -5px;
 }
 
-.intro .title {
-	font-family: "Shrikhand", cursive;
-	color: #CC0000;	
-	float: left;
-	padding-left: 1.43em;
-}
 
-.introButton {
-	text-align: center;
-}
-
-.enter {
+/*.enter {
 	position: absolute;
 	top: 60%;
 	right: 50%;
@@ -98,7 +120,7 @@ h2 {
 	border-radius: 0.2em;
 	color: #CC0000;
 
-}
+}*/
 
 .curious {
 	background: rgba(0, 0, 0, 0.75);
@@ -115,7 +137,14 @@ h2 {
 
 
 .homeScreen {
-	margin-top: 123px;
+	margin-top: 10em;
+	margin-bottom: 5em;
+	
+}
+
+.click-to-enter {
+	text-align: center;
+	margin-bottom: 15em;
 }
 
 
@@ -127,12 +156,16 @@ h2 {
 
 }
 
-.resultsScreen .title {
+.resultsScreen  {
 	font-family: "Shrikhand", cursive;
 	color: #CC0000;	
 	float: left;
 	padding-left: 1.43em;
 }
+
+
+
+/*Button Styles*/
 
 .closeResultsButton {
 	text-align: center;	
@@ -154,12 +187,27 @@ h2 {
 	border-radius:5px;	
 	display:inline-block;
 	cursor:pointer;	
-	font-family: "Creepster", cursive;
+	font-family: "Montserrat", sans-serif;
 	font-size:17px;
 	font-weight:bold;	
 		
 }
 .closeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+
+
+#appContainerButton {	
+	cursor:pointer;	
+	font-family: "Montserrat", sans-serif;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+}
+
+#appContainerButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
 	background-color:#378de5;
@@ -175,74 +223,60 @@ h2 {
 }
 
 
-.jumbotron {
-	background: url(../img/brooklyn-bridge-bw.jpg);
-    background-size: cover;
-    height: 55em;
-    margin-bottom: 0;
-}
 
 .appContainer {
-	background-color: gray;
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000000 , #434343);
     height: 100%;    
     width: 100%;    
 }
 
 #appContainerScreen {
-	float: right;
-	margin-top: 5em;
-	margin-right: 7em;
-}
-
-#appContainerButton {
-	margin-left: 15em;
-	cursor:pointer;	
-	font-family: "Creepster", cursive;
-}
-
-#appContainerButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
-	background-color:#378de5;
+	text-align: center;
 }
 
 
-
-
-
-.container {	
+/*.container {	
 	width: 100%;
 
+}*/
+
+.search {
+	margin-top: 10em;
+	margin-bottom: 10em;
+	text-align: center;
 }
 
-.searchSection {
-	margin-top: 10em;
-	margin-left: 4em;
-}
+
 
 
 
 .shadow {
-	background: rgba(0, 0, 0, 0.75);
+	
 	padding: 1em;
-	width: 22em;
-	border-radius: 2em;
+	/*width: 22em;*/
+	border-radius: 10px;
 	display: inline-block;
-	margin-top: 5em;
+	box-shadow: inset 3px -3px 2px 3px black;
 }
 
-.shadow-oracle {
-	background: rgba(0, 0, 0, 0.75);
-	margin-left: 7em;
-	margin-top: 5em;
-	padding: 1em;
-	width: 30em;
-	border-radius: 2em;
-	display: inline-block;
+.askOracle {
+	text-align: center;
+	padding-top: 7em;
 }
 
-.shadow-oracle p {
+.askOracle h3 {
+	font-family: "Shrikhand", cursive;
+	color: #CC0000;
+	text-decoration: none;
+
+}
+
+.askOracle p {
+	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
+	color: white;
 }
 
 .display {
@@ -264,12 +298,13 @@ h2 {
 }
 
 .skeletonField img {	
-	background: rgba(0, 0, 0, 0.75);
-	padding: 1em;
+/*	background: rgba(0, 0, 0, 0.75);
+	padding: 1em;*/
 	height: 18em;
 	width: 25em;
-	border-radius: 2em;
+	border-radius: 9em;
 	display: inline-block;
+	box-shadow: 4px 1px 6px 3px black
 }
 
 .results {
@@ -279,22 +314,19 @@ h2 {
 	padding: 0.1em 0.1em 0.1em 1.3em;
 }
 
-.skull {
-	width: 15em;
-	height: 10em;
-	margin: 0 auto;
-	
-}
+
 
 .skull img {
 	border-radius: 50%;
-	width: 7em;
-	height: 7em;	
+	width: 3.5em;
+	height: 3.5em;	
 	padding: 3px;
 	background-color: white;
-	float: right;
+	text-align: center;
 
 }
+
+
 
 
 /*Modal Styles*/
@@ -322,6 +354,32 @@ h2 {
 }
 
 
+
+.footer {
+	position: absolute;	
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	padding-top: 1em;
+	background: #8E0E00; 
+	background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18); 
+	background: linear-gradient(to left, #8E0E00 , #1F1C18); 
+        
+
+}
+
+
+/*Font Awesome Styles*/
+
+.fa-linkedin-square { 
+	color: white;
+	padding-right: 0.5em;
+}
+
+.fa-github {
+	color: white;
+	padding-left: 0.5em;
+}
 
 /*C3 Chart*/
 
