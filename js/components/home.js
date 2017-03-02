@@ -2,7 +2,7 @@ import React from 'react';
 import actions from '../actions/index';
 import { Button, Jumbotron, Grid, Row, Col } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
-import About from './about-logo';
+
 
 
 

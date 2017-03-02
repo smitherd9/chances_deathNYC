@@ -5,7 +5,6 @@ import { Button, Grid, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import store from '../store'
 import Header from './header';
-import About from './about-logo';
 import Footer from './footer';
 import { browserHistory } from 'react-router';
 
