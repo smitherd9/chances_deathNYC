@@ -24,19 +24,16 @@ export default class ResultsScreen extends React.Component {
 		
 		return (
 			<div className="resultsScreen">
-			
-			<section className="resultsSection">
-			<Row className="searchRow">
-			<Col md={12}><Display /></Col>
-			</Row>
 
 			<div className="closeResultsButton">	
 			<Button className="closeButton" bsSize="large" type="button" onClick={this.hide} active>Search Again</Button>	
-			</div>
+			</div>		
 
-
+			<Row className="searchRow">
+			<Col md={12} sm={12} xs={16}><Display /></Col>
+			</Row>
 			
-			</section>
+
 			
 			
 			

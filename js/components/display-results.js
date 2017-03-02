@@ -28,27 +28,26 @@ class Display extends React.Component {
 		return (
 					
 			<div>
-			<Row>
-			<div>
+			<Row className="resultsRow">
+			
 			<Col md={4}>
 			<Display1 />					
 				
 			</Col>
-			</div>
+			
 
-			<div>
+			
 			<Col md={4}>
 			<Display2 />
 			</Col>
-			</div>
+			
 			
 
-			<div>
+			
 			<Col md={4}>
 			<Display3 />
 				
-			</Col>
-			</div>
+			</Col>			
 			</Row>
 
 			<Row>

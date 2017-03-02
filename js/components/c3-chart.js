@@ -15,7 +15,7 @@ class Chart extends React.Component {
 		let  data = {
             x: 'x',
             columns: [],
-            type: 'bar'
+            type: 'pie'
         };
 
         let years = [];
@@ -92,7 +92,24 @@ class Chart extends React.Component {
       					position: 'outer-middle'
       				}
       			}
-      		}
+      		},
+
+          this.tooltip = {
+            show: false
+          },
+
+          this.padding = {
+            top: 20,
+            right: 20,
+            left: 20,
+            bottom: 30 
+          },
+
+          this.size = {
+            width: 700,
+            height: 700
+          }
+
 
 
       	};
@@ -106,7 +123,7 @@ class Chart extends React.Component {
 		let data = {
             x: 'x',
             columns: [],
-            type: 'bar'
+            type: 'pie'
         };
 
         let years = [];
@@ -152,7 +169,7 @@ class Chart extends React.Component {
 
 		return(	
 			
-			<div id="chart"><C3Chart data={this.data} grid={this.grid} bar={this.bar} axis={this.axis}  /></div>
+			<div id="chart"><C3Chart data={this.data} grid={this.grid} bar={this.bar} axis={this.axis} tooltip={this.tooltip} padding={this.padding} size={this.size} /></div>
 
 			
 			
