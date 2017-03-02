@@ -150,17 +150,20 @@ span > p {
 
 /* Results Screen  */
 
-.resultsScreen { 
-    width: 100%;
-    height: 100%;    
-
-}
 
 .resultsScreen  {
+	font-family: "Montserrat", sans-serif;
+	width: 100%;
+    height: 100%; 	
+}
+
+.resultsScreen > h3 {
 	font-family: "Shrikhand", cursive;
-	color: #CC0000;	
-	float: left;
-	padding-left: 1.43em;
+	color: #CC0000;
+}
+
+.resultsRow {
+	box-shadow: inset -6px -7px 6px 1px black;
 }
 
 
@@ -168,26 +171,20 @@ span > p {
 /*Button Styles*/
 
 .closeResultsButton {
-	text-align: center;	
-	top: 75%;
-	right: 50%;
+	text-align: center;
+	padding: 5em;	
 }
 
-.closeButton {
+.closeButton.btn-default {
 	
-	top: 50%;
-	right: 50%;
-	margin-left: 50%;
-	box-shadow: 3px 4px 0px 0px #1564ad;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
-
-	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
-	background-color:#79bbff;
+	box-shadow: 0px 3px 3px 3px black;
+	background-color: transparent;
+	border: 1px solid white;
 	border-radius:5px;	
 	display:inline-block;
 	cursor:pointer;	
 	font-family: "Montserrat", sans-serif;
+	color: white;
 	font-size:17px;
 	font-weight:bold;	
 		
@@ -297,12 +294,10 @@ span > p {
 }
 
 .display {
-	background: rgba(0, 0, 0, 0.75);
-	margin-top: 15em;
-	margin-left: 4em;
+	
+	margin-top: 10em;
 	padding: 1em;
-	width: 22em;
-	border-radius: 2em;
+	width: 22em;	
 	display: inline-block;
 }
 
@@ -398,13 +393,23 @@ span > p {
 
 /*C3 Chart*/
 
-#chart {
-	background-color: white;
-	margin-top: 7em;
+#chart {	
+
+	background: #ECE9E6; 
+	background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); 
+	background: linear-gradient(to left, #ECE9E6 , #FFFFFF);        
+	padding-top: 7em;
+	padding-bottom: 5em;
+	text-align: center;
+/*	width: 100%;
+	height: 700px;*/
+
 }
 
-.c3 {
-	margin-top: 20em;
+text {
+	font-size: 12px;
 }
+
+
 
 
