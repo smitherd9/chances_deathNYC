@@ -114,7 +114,7 @@ const closeAboutModal = () => {
 
 const byEthnicity = function(ethnicity) {
     return function(dispatch) {
-        var url = new Request('http://localhost:8000/ethnicity/' + ethnicity, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/ethnicity/' + ethnicity, 
 
         	{method: 'GET', 
         	headers: {

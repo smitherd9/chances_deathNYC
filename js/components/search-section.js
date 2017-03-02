@@ -24,14 +24,14 @@ export default class SearchSection extends React.Component {
 		return (
 			<div className="search">
 			
-			<section className="searchSection">
+			
 			<Row className="searchRow">
 				<Col md={4}><Ethnicity /></Col>
 				<Col md={4}><Sex /></Col>
 				<Col md={4}><Year /></Col>	
 			</Row>
 			
-			</section>
+			
 			
 			
 			

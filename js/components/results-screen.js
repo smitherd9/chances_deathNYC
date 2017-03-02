@@ -24,7 +24,7 @@ export default class ResultsScreen extends React.Component {
 		
 		return (
 			<div className="resultsScreen">
-			<Jumbotron>
+			
 			<section className="resultsSection">
 			<Row className="searchRow">
 			<Col md={12}><Display /></Col>
@@ -37,8 +37,7 @@ export default class ResultsScreen extends React.Component {
 
 			
 			</section>
-			</Jumbotron>
-			<div className="arrow-down"></div>
+			
 			
 			
 			</div>

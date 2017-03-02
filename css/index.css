@@ -159,8 +159,6 @@ span > p {
 .resultsScreen  {
 	font-family: "Shrikhand", cursive;
 	color: #CC0000;	
-	float: left;
-	padding-left: 1.43em;
 }
 
 
@@ -297,12 +295,10 @@ span > p {
 }
 
 .display {
-	background: rgba(0, 0, 0, 0.75);
-	margin-top: 15em;
-	margin-left: 4em;
+	
+	margin-top: 10em;
 	padding: 1em;
-	width: 22em;
-	border-radius: 2em;
+	width: 22em;	
 	display: inline-block;
 }
 
@@ -398,8 +394,11 @@ span > p {
 
 /*C3 Chart*/
 
-#chart {
-	background-color: white;
+#chart {	
+
+	background: #ECE9E6; 
+	background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); 
+	background: linear-gradient(to left, #ECE9E6 , #FFFFFF);        
 	margin-top: 7em;
 }
 
