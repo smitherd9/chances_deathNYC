@@ -33,18 +33,22 @@
 .navbar-brand {
 	float: none;
 	cursor: pointer;
+	color: #CC0000 !important;
 }
 
 .navbar-brand h1 {
 	font-family: "Shrikhand", cursive;
 	font-size: 36px;
-	color: #CC0000;
+	
 }
 
 .navbar-brand small {
 	font-family: "Shrikhand", cursive;
-	font-size: 24px;
-	color: #CC0000;
+	font-size: 24px;	
+}
+
+.navbar-brand:hover {
+	color:#378de5 !important;
 }
 
 .header-container {
@@ -68,14 +72,6 @@
 		
 }
 
-.about {
-	font-family: "Shrikhand", cursive;
-	font-size: 32px;
-	color: #CC0000;
-	margin-top: 1em;	
-
-}
-
 
 p {
 	font-family: "Montserrat", sans-serif;
@@ -83,14 +79,8 @@ p {
 }
 
 h3 {
-	font-family: "Shrikhand", cursive;
-	color: #CC0000;
-    text-decoration: underline;
-}
-
-h2 {
-	font-family: "Shrikhand", cursive;
-	color: gray;
+	font-family: "Montserrat", sans-serif;
+	color: #CC0000;    
 }
 
 
@@ -135,11 +125,43 @@ span > p {
 
 /*Home Screen*/
 
-
 .homeScreen {
-	margin-top: 10em;
+	text-align: center;
+	padding-top: 7em;
+}
+
+.homeScreen h3 {
+	font-family: "Shrikhand", cursive;
+	color: #CC0000;
+	text-decoration: none;
+
+}
+
+.homeScreen p {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
+
+.homeScreen2 {
+	margin-top: 5em;
 	margin-bottom: 5em;
+	text-align: center;
 	
+}
+
+.about {
+	font-family: "Shrikhand", cursive;
+	font-size: 32px;
+	color: #CC0000;
+	margin-top: 1em;
+	cursor: pointer;	
+
+}
+
+.about:hover {
+	color:#378de5;
 }
 
 .click-to-enter {
@@ -157,13 +179,16 @@ span > p {
     height: 100%; 	
 }
 
-.resultsScreen > h3 {
-	font-family: "Shrikhand", cursive;
+.resultsScreen h3 {
+	font-family: "Montserrat", sans-serif;
 	color: #CC0000;
 }
 
 .resultsRow {
 	box-shadow: inset -6px -7px 6px 1px black;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 5em;
 }
 
 
@@ -172,7 +197,8 @@ span > p {
 
 .closeResultsButton {
 	text-align: center;
-	padding: 5em;	
+	padding-top: 5em;
+	padding-bottom: 3em;	
 }
 
 .closeButton.btn-default {
@@ -225,16 +251,21 @@ span > p {
 	background-color:#378de5;
 }
 
-
-
-.arrow-down {
-  width: 0; 
-  height: 0; 
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  
-  border-top: 20px solid #f00;
+.modal-close-btn.btn-default {	
+	cursor:pointer;	
+	font-family: "Montserrat", sans-serif;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
 }
+
+.modal-close-btn.btn-default:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+
+
 
 
 
@@ -275,31 +306,15 @@ span > p {
 	box-shadow: inset 3px -3px 2px 3px black;
 }
 
-.askOracle {
-	text-align: center;
-	padding-top: 7em;
-}
 
-.askOracle h3 {
-	font-family: "Shrikhand", cursive;
-	color: #CC0000;
-	text-decoration: none;
 
-}
-
-.askOracle p {
-	font-family: "Montserrat", sans-serif;
-	font-size: 18px;
-	color: white;
-}
-
-.display {
-	
+.display {	
 	margin-top: 10em;
 	padding: 1em;
 	width: 22em;	
 	display: inline-block;
 }
+
 
 .witchHouse img {	
 	background: rgba(0, 0, 0, 0.75);
@@ -344,23 +359,29 @@ span > p {
 .modal-header {
 	font-family: "Shrikhand", cursive;
 	color: #CC0000;	
-	background-color: floralwhite;
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000000 , #434343);
 	text-align: center;
 }
 
 .modal-body {
-	background-color: floralwhite;
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000000 , #434343);
 }
 
 .modal-body p {
-	font-family: "Shrikhand", cursive;
-	color: #2e8dfb;
+	font-family: "Montserrat", sans-serif;
+	color: #378de5;
 	
 
 }
 
 .modal-footer {
-	background-color: floralwhite;
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000000 , #434343);
 }
 
 
@@ -390,6 +411,9 @@ span > p {
 	color: white;
 	padding-left: 0.5em;
 }
+
+
+
 
 /*C3 Chart*/
 
