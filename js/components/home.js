@@ -1,16 +1,27 @@
 import React from 'react';
 import actions from '../actions/index';
-import { Button, Jumbotron, Grid, Row, Col } from 'react-bootstrap';
+import store from '../store';
+import { Button, Jumbotron, Grid, Row, Col, Modal } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
+import { connect } from 'react-redux';
 
 
 
 
 
-export default class Home extends React.Component {
+class Home extends React.Component {
 	constructor(props){
-		super(props);		
+		super(props);
+		this.showAboutModal = this.showAboutModal.bind(this);		
 	}
+
+	showAboutModal() {
+    store.dispatch(actions.showAboutModal());
+  }
+
+  	closeAboutModal() {
+    store.dispatch(actions.closeAboutModal());
+  }
 
 	handleClick() {
 		browserHistory.push('/search');
@@ -24,22 +35,38 @@ export default class Home extends React.Component {
 		
 		<div className="homeSection">
 
-			<Row className="askOracle">
-				<h3>Ask the Oracle!</h3>
+			<Row className="homeScreen">				
 				<p>Curious about leading causes of death in NYC?</p>
 				<p>With a little information about yourself, I will query for NYC government data.</p>
 			</Row>
 
-			<Row className="homeScreen">		
-				<div id="appContainerScreen" className="skeletonField">
-					<img src="../../img/skeleton-field.jpg" />
-				</div>				
+			<Row className="homeScreen2">
+				<p className="about hvr-grow-shadow" onClick={this.showAboutModal}>About</p>				
 			</Row>
 			
 
 			<Row className="click-to-enter">
 			<Button id="appContainerButton" onClick={this.handleClick}>Click to search for your fate!</Button>
 			</Row>
+
+
+
+			<Modal show={this.props.showAboutModal} onHide={this.closeSignUp}>
+              <Modal.Header closeButton>
+              <h2>What are the Chances? <br/>-- Death in NYC</h2>
+              </Modal.Header>
+                <Modal.Body>                  
+                  <p>This app gathers data on leading causes of death in</p>
+                  <p>New York City from 2007 to 2014 and gives you the most likely</p>
+                  <p>cause of death based on NYC's Open Data API's highest age adjusted death rate. </p>
+                  <p>It also generates a C3.js chart to display leading causes of death based on the</p>
+                  <p>age adjusted death rate and the user's search query.</p>
+                  
+                </Modal.Body>
+                <Modal.Footer>                  
+                  <Button className="modal-close-btn" onClick={this.closeAboutModal}>Close</Button>
+                </Modal.Footer>
+          </Modal>  
 			
 		</div>
 			
@@ -47,6 +74,17 @@ export default class Home extends React.Component {
 	}
 
 }
+
+
+let mapStateToProps = (state, props) => {
+    return {
+    	showAboutModal: state.showAboutModal
+    	
+        
+    }
+};
+
+export default connect(mapStateToProps)(Home);
 
 
 
