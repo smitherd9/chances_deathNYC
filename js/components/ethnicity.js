@@ -37,10 +37,6 @@ class Ethnicity extends React.Component {
 		browserHistory.push('/results');
 	}
 
-	componentDidUpdate(){
-		
-		// store.dispatch(actions.selectedEthnicityDefault());
-	}
 
 	render() {
 

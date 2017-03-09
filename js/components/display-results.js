@@ -27,8 +27,8 @@ class Display extends React.Component {
 	render() {
 		return (
 					
-			<div>
-			<Row className="resultsRow">
+			<div className="width-100">
+			<Row className="resultsRow width-100">
 			
 			<Col md={4}>
 			<Display1 />					
@@ -51,9 +51,9 @@ class Display extends React.Component {
 			</Row>
 
 			<Row>
-			<Col md={12}>
+
 			{this.chart}
-			</Col>
+
 			</Row>
 
 			</div>

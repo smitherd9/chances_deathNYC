@@ -25,11 +25,11 @@ export default class ResultsScreen extends React.Component {
 		return (
 			<div className="resultsScreen">
 
-			<Row className="searchRow">
-			<Col md={12} sm={12} xs={16}><Display /></Col>
+			<Row className="searchRow width-100">				
+				<Display />
 			</Row>
 
-			<Row className="closeResultsButton">				
+			<Row className="closeResultsButton width-100">				
 			<Button className="closeButton" bsSize="large" type="button" onClick={this.hide}>Search Again</Button>	
 			</Row>	
 			

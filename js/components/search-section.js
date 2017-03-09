@@ -25,7 +25,7 @@ export default class SearchSection extends React.Component {
 			<div className="search">
 			
 			
-			<Row className="searchRow">
+			<Row className="searchRow width-100">
 				<Col md={4}><Ethnicity /></Col>
 				<Col md={4}><Sex /></Col>
 				<Col md={4}><Year /></Col>	
