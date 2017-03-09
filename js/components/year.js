@@ -45,12 +45,12 @@ class Year extends React.Component {
 		return (
 		
 
-		<div className="shadow">
+		<div className="shadow width-100">
 		<h3>Search by Year</h3>
 		<form>
 		<FormGroup>
 
-		<SplitButton title={this.props.selectedYear} toggleLabel="Search by Year" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<SplitButton className="search-dropdown" title={this.props.selectedYear} toggleLabel="Search by Year" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="2007">2007</MenuItem>
     		<MenuItem eventKey="2008">2008</MenuItem>
     		<MenuItem eventKey="2009">2009</MenuItem>
@@ -62,7 +62,7 @@ class Year extends React.Component {
     	</SplitButton>
 
 		</FormGroup>
-		<Button bsStyle="primary" bsSize="large" className="goButton"  type="button" onClick={this.handleClick}>Go!</Button>
+		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>
 		</form>
 		</div>		
 		

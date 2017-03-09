@@ -39,15 +39,20 @@ class Home extends React.Component {
 				<p>Curious about leading causes of death in NYC?</p>
 				<p>With a little information about yourself, I will query for NYC government data.</p>
 			</Row>
-
 			<Row className="homeScreen2">
-				<p className="about hvr-grow-shadow" onClick={this.showAboutModal}>About</p>				
+				<span className="about hvr-grow-shadow" onClick={this.showAboutModal}>Learn More</span>				
 			</Row>
-			
 
 			<Row className="click-to-enter">
-			<Button id="appContainerButton" onClick={this.handleClick}>Click to search for your fate!</Button>
+			<Button id="appContainerButton" onClick={this.handleClick}>SEARCH YOUR FATE!</Button>
 			</Row>
+
+
+
+
+			
+
+
 
 
 

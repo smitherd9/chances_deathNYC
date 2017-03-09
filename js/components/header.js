@@ -29,14 +29,6 @@ export default class Header extends React.Component {
         </Navbar.Header>
       </Navbar>
 
-      <Grid fluid>
-        <PageHeader>
-        <span className="skull center-block">
-          <a href="#" className="hvr-float-shadow"><img src="../../img/skull.svg" /></a>
-        </span>
-        </PageHeader>  
-
-      </Grid>
     </div>  
       
 			

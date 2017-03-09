@@ -48,13 +48,13 @@ class Ethnicity extends React.Component {
 
 		return (	
 
-		<div className="shadow">		
+		<div className="shadow width-100">		
 		<h3>Search by Ethnicity</h3>
-		<form>
+		<form className="width-100">
 		
-		<FormGroup>
+		<FormGroup className="width-100">
 
-		<SplitButton title={this.props.selectedEthnicity} toggleLabel="Search by Ethnicity" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<SplitButton className="search-dropdown" title={this.props.selectedEthnicity} toggleLabel="Search by Ethnicity" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="Asian and Pacific Islander">Asian and Pacific Islander</MenuItem>
     		<MenuItem eventKey="Black Non-Hispanic">Black Non-Hispanic</MenuItem>
     		<MenuItem eventKey="White Non-Hispanic">White Non-Hispanic</MenuItem>
@@ -63,7 +63,7 @@ class Ethnicity extends React.Component {
 		
 		</FormGroup>
 
-		<Button bsStyle="primary" bsSize="large" className="goButton"  type="button" onClick={this.handleClick}>Go!</Button>
+		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>
 		
 		</form>
 		

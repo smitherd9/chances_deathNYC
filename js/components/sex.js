@@ -48,18 +48,18 @@ class Sex extends React.Component {
 		return (
 		
 
-		<div className="shadow">
+		<div className="shadow width-100">
 		<h3>Search by Sex</h3>
 		<form>
 		<FormGroup>
 
-		<SplitButton title={this.props.selectedSex} toggleLabel="Search by Sex" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<SplitButton className="search-dropdown" title={this.props.selectedSex} toggleLabel="Search by Sex" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="M">Male</MenuItem>
     		<MenuItem eventKey="F">Female</MenuItem>
     	</SplitButton>
 
 		</FormGroup>
-		<Button bsStyle="primary" bsSize="large" className="goButton"  type="button" onClick={this.handleClick}>Go!</Button>
+		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>
 		</form>
 		</div>		
 		

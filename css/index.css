@@ -10,6 +10,14 @@
 }
 */
 
+.width-100 { 
+	width: 100%; 
+}
+
+.width-50 {
+	width: 50%;
+}
+
 
 /*Navigation*/
 
@@ -37,23 +45,23 @@
 }
 
 .navbar-brand h1 {
-	font-family: "Shrikhand", cursive;
+	font-family: "Montserrat", sans-serif;
 	font-size: 36px;
+	font-weight: 600;
+	margin: 1em 0 0 0;
 	
 }
 
 .navbar-brand small {
-	font-family: "Shrikhand", cursive;
-	font-size: 24px;	
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
+	font-weight: 600;	
 }
 
 .navbar-brand:hover {
-	color:#378de5 !important;
+	color:#8a0303 !important;
 }
 
-.header-container {
-	box-shadow: -20px 11px 12px black;
-}
 
 .page-header {
 	border: none;
@@ -80,7 +88,9 @@ p {
 
 h3 {
 	font-family: "Montserrat", sans-serif;
-	color: #CC0000;    
+	color: #CC0000;
+	padding: 0 0 24px 0;
+	font-weight: bold;    
 }
 
 
@@ -127,7 +137,7 @@ span > p {
 
 .homeScreen {
 	text-align: center;
-	padding-top: 7em;
+	
 }
 
 .homeScreen h3 {
@@ -144,16 +154,15 @@ span > p {
 }
 
 
-.homeScreen2 {
-	margin-top: 5em;
-	margin-bottom: 5em;
+.homeScreen2 {	
+	margin-bottom: 1em;
 	text-align: center;
 	
 }
 
 .about {
-	font-family: "Shrikhand", cursive;
-	font-size: 32px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
 	color: #CC0000;
 	margin-top: 1em;
 	cursor: pointer;	
@@ -161,7 +170,7 @@ span > p {
 }
 
 .about:hover {
-	color:#378de5;
+	color:#8a0303;
 }
 
 .click-to-enter {
@@ -195,6 +204,10 @@ span > p {
 
 /*Button Styles*/
 
+.btn {
+	padding: 12px 8px;
+}
+
 .closeResultsButton {
 	text-align: center;
 	padding-top: 5em;
@@ -204,36 +217,62 @@ span > p {
 .closeButton.btn-default {
 	
 	box-shadow: 0px 3px 3px 3px black;
-	background-color: transparent;
+	background-color: #CC0000;
 	border: 1px solid white;
 	border-radius:5px;	
 	display:inline-block;
 	cursor:pointer;	
 	font-family: "Montserrat", sans-serif;
 	color: white;
+	padding: 12px 8px; 
 	font-size:17px;
 	font-weight:bold;	
 		
 }
-.closeButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
-	background-color:#378de5;
+.closeButton:hover {	
+	background-color:#8a0303;
 }
 
 
 #appContainerButton {	
 	cursor:pointer;	
 	font-family: "Montserrat", sans-serif;
-	background-color: transparent;
-	border: 1px solid white;
+	background-color: #CC0000;
+	/*border: 1px solid white;*/
 	color: white;
+	padding: 12px 8px; 
 }
 
 #appContainerButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
-	background-color:#378de5;
+	background-color:#8a0303;
+}
+
+.dropdown.btn-group {
+	width: 50%;
+}
+
+.search-dropdown {
+	width: 85.4%;
+	background: transparent;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+
+}
+
+.search-dropdown:hover {
+	background: transparent;
+	color: white;
+}
+
+.dropdown-toggle {
+	width: 15%;
+	background: transparent;
+	color: white;
+}
+
+.dropdown-toggle:hover {
+	background-color: #8a0303;
+	color: white;
 }
 
 
@@ -270,9 +309,9 @@ span > p {
 
 
 .appContainer {
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #000000 , #434343);
+	background: #000000; 
+/*	background: -webkit-linear-gradient(to top, #000000 , #434343); 
+	background: linear-gradient(to top, #000000 , #434343);*/
     height: 100%;    
     width: 100%;    
 }
@@ -393,8 +432,8 @@ span > p {
 	text-align: center;
 	padding-top: 1em;
 	background: #8E0E00; 
-	background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18); 
-	background: linear-gradient(to left, #8E0E00 , #1F1C18); 
+	background: -webkit-linear-gradient(to top, #8E0E00 , #0F0F07); 
+	background: linear-gradient(to top, #8E0E00 , #0F0F07); 
         
 
 }
