@@ -3,13 +3,6 @@
 }
 
 
-
-/*body {
-    height: 100%;
-    overflow: auto;
-}
-*/
-
 .width-100 { 
 	width: 100%; 
 }
@@ -99,28 +92,6 @@ span > p {
 }
 
 
-/*.enter {
-	position: absolute;
-	top: 60%;
-	right: 50%;
-}
-
-.enter:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
-	background-color:#378de5;
-}
-
-.clickEnter {
-	background: rgba(0, 0, 0, 0.75);
-	position: absolute;
-	top: 70%;
-	margin: 0 auto;
-	margin-left: 14.6em;
-	border-radius: 0.2em;
-	color: #CC0000;
-
-}*/
 
 .curious {
 	background: rgba(0, 0, 0, 0.75);
@@ -299,9 +270,7 @@ span > p {
 }
 
 .modal-close-btn.btn-default:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
-	background-color:#378de5;
+	background-color: #8a0303;
 }
 
 
@@ -310,8 +279,6 @@ span > p {
 
 .appContainer {
 	background: #000000; 
-/*	background: -webkit-linear-gradient(to top, #000000 , #434343); 
-	background: linear-gradient(to top, #000000 , #434343);*/
     height: 100%;    
     width: 100%;    
 }
@@ -331,10 +298,8 @@ span > p {
 
 
 
-.shadow {
-	
+.shadow {	
 	padding: 1em;
-	/*width: 22em;*/
 	border-radius: 10px;
 	display: inline-block;
 	box-shadow: inset 3px -3px 2px 3px black;
@@ -391,31 +356,26 @@ span > p {
 /*Modal Styles*/
 
 .modal-header {
-	font-family: "Shrikhand", cursive;
-	color: #CC0000;	
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #000000 , #434343);
+	font-family: "Montserrat", sans-serif;
+	color: #CC0000;
+	background: #131111;
 	text-align: center;
 }
 
 .modal-body {
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #000000 , #434343);
+	background: #131111;
 }
 
 .modal-body p {
 	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
 	color: #378de5;
 	
 
 }
 
 .modal-footer {
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #000000 , #434343);
+	background: #131111;
 }
 
 
