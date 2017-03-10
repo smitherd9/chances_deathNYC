@@ -37,7 +37,7 @@ class Home extends React.Component {
 
 			<Row className="homeScreen width-100">				
 				<p>Curious about leading causes of death in NYC?</p>
-				<p>With a little information about yourself, I will query for NYC government data.</p>
+				<p>With a little information, I will query for NYC government data.</p>
 			</Row>
 			<Row className="homeScreen2 width-100">
 				<span className="about hvr-grow-shadow" onClick={this.showAboutModal}>Learn More</span>				
@@ -57,15 +57,15 @@ class Home extends React.Component {
 
 
 			<Modal show={this.props.showAboutModal} onHide={this.closeSignUp}>
-              <Modal.Header closeButton>
+              <Modal.Header>
               <h2>What are the Chances? <br/>-- Death in NYC</h2>
               </Modal.Header>
                 <Modal.Body>                  
-                  <p>This app gathers data on leading causes of death in</p>
-                  <p>New York City from 2007 to 2014 and gives you the most likely</p>
-                  <p>cause of death based on NYC's Open Data API's highest age adjusted death rate. </p>
-                  <p>It also generates a C3.js chart to display leading causes of death based on the</p>
-                  <p>age adjusted death rate and the user's search query.</p>
+                  <p>Gathering data on leading causes of death in
+                  New York City from 2007 to 2014, this app gives you the most likely
+                  cause of death based on NYC's Open Data API's highest age adjusted death rate.</p> 
+                  <p>It also generates a C3.js chart to display leading causes of death based on the
+                  age adjusted death rate and the user's search query.</p>
                   
                 </Modal.Body>
                 <Modal.Footer>                  
