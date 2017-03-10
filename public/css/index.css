@@ -265,12 +265,14 @@ span > p {
 	cursor:pointer;	
 	font-family: "Montserrat", sans-serif;
 	background-color: transparent;
-	border: 1px solid white;
-	color: white;
+	border: 1px solid rgb(102, 102, 102);
+	color: rgb(102, 102, 102);
 }
 
 .modal-close-btn.btn-default:hover {
 	background-color: #8a0303;
+	border: 1px solid white;
+	color: white;
 }
 
 
