@@ -35,9 +35,11 @@ class Home extends React.Component {
 		
 		<div className="homeSection">
 
-			<Row className="homeScreen width-100">				
+			<Row className="homeScreen width-100">
+			<Col lg={12}>				
 				<p>Curious about leading causes of death in NYC?</p>
 				<p>With a little information, I will query for NYC government data.</p>
+			</Col>
 			</Row>
 			<Row className="homeScreen2 width-100">
 				<span className="about hvr-grow-shadow" onClick={this.showAboutModal}>Learn More</span>				

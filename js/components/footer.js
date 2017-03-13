@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
 
 	render() {
 		return (
-		<div className="footer">
+		<div className="footer navbar-fixed-bottom">
 			<Grid>
 				<Row>
 					<Col sm={12}>
