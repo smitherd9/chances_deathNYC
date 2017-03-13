@@ -50,10 +50,11 @@ class Display extends React.Component {
 			</Col>			
 			</Row>
 
-			<Row>
+			<Row className="chart-row">
+			<Col md={12} className="chart-columns">
 
 			{this.chart}
-
+			</Col>
 			</Row>
 
 			</div>
