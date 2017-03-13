@@ -41,13 +41,13 @@
 	font-family: "Montserrat", sans-serif;
 	font-size: 36px;
 	font-weight: 600;
-	margin: 1em 0 0 0;
+	margin: 1em 0em 0.2em 0em;
 	
 }
 
 .navbar-brand small {
 	font-family: "Montserrat", sans-serif;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 600;	
 }
 
@@ -55,23 +55,18 @@
 	color:#8a0303 !important;
 }
 
+/*Header*/
+
+
+
 
 .page-header {
 	border: none;
 	text-align: center;
 	margin-top: 20px;
 	cursor: pointer;
-
 }
 
-
-
-.title > h1 {
-	font-family: "Shrikhand", cursive;
-	font-size: 36px;
-	color: #CC0000;	
-		
-}
 
 
 p {
@@ -86,10 +81,10 @@ h3 {
 	font-weight: bold;    
 }
 
-
+/*
 span > p {
 	margin: 0 0 -5px;
-}
+}*/
 
 
 
@@ -108,14 +103,8 @@ span > p {
 
 .homeScreen {
 	text-align: center;
-	
-}
-
-.homeScreen h3 {
-	font-family: "Shrikhand", cursive;
-	color: #CC0000;
-	text-decoration: none;
-
+	margin: 0 auto;
+	padding-bottom: 3em;
 }
 
 .homeScreen p {
@@ -126,8 +115,9 @@ span > p {
 
 
 .homeScreen2 {	
-	margin-bottom: 1em;
+	padding-bottom: 1em;
 	text-align: center;
+	margin: 0 auto;
 	
 }
 
@@ -146,7 +136,8 @@ span > p {
 
 .click-to-enter {
 	text-align: center;
-	margin-bottom: 25em;
+	margin: 0 auto;
+	padding-bottom: 25em;
 }
 
 
@@ -181,6 +172,7 @@ span > p {
 
 .closeResultsButton {
 	text-align: center;
+	margin: 0 auto;
 	padding-top: 5em;
 	padding-bottom: 3em;	
 }
@@ -235,6 +227,10 @@ span > p {
 	color: white;
 }
 
+.searchRow {
+	margin: 0 auto;
+}
+
 .dropdown-toggle {
 	width: 15%;
 	background: transparent;
@@ -279,7 +275,9 @@ span > p {
 .appContainer {
 	background: #000000; 
     height: 100%;    
-    width: 100%;    
+    width: 100%;
+    position: absolute;
+    /*position: fixed; */   
 }
 
 #appContainerScreen {
@@ -290,6 +288,7 @@ span > p {
 .search {
 	margin-top: 10em;
 	margin-bottom: 15em;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -313,22 +312,6 @@ span > p {
 	display: inline-block;
 }
 
-
-.witchHouse img {	
-	background: rgba(0, 0, 0, 0.75);
-	padding: 1em;
-	width: 30em;
-	border-radius: 2em;
-	display: inline-block;
-}
-
-.skeletonField img {	
-	height: 18em;
-	width: 25em;
-	border-radius: 9em;
-	display: inline-block;
-	box-shadow: 4px 1px 6px 3px black
-}
 
 .results {
 	font-family: "Bitter", cursive;
@@ -382,6 +365,7 @@ span > p {
 	width: 100%;
 	height: 60px;
 	text-align: center;
+	margin: 0 auto;
 	padding-top: 1em;
 	background: #8E0E00; 
 	background: -webkit-linear-gradient(to top, #8E0E00 , #0F0F07); 
@@ -409,6 +393,19 @@ span > p {
 	.display-toggle {
 		width: 14%;
 	}
+}
+
+@media screen and (max-width: 453px) {
+	.header-container {
+		padding-bottom: 5em;
+	}
+
+	.homeScreen {
+		width: 85%;
+		padding-bottom: 3em;
+	}
+
+
 }
 
 
