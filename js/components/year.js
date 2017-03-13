@@ -50,7 +50,7 @@ class Year extends React.Component {
 		<form>
 		<FormGroup>
 
-		<SplitButton className="search-dropdown" title={this.props.selectedYear} toggleLabel="Search by Year" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<SplitButton className="search-dropdown" title={this.props.selectedYear} toggleLabel="Year" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="2007">2007</MenuItem>
     		<MenuItem eventKey="2008">2008</MenuItem>
     		<MenuItem eventKey="2009">2009</MenuItem>

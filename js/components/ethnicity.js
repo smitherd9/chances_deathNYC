@@ -25,7 +25,6 @@ class Ethnicity extends React.Component {
 		console.log(store.getState());
 		this.showResults();
 		console.log('selected: ' + store.getState().selectedEthnicity);
-		// console.log('typeOf: ' + typeof(store.getState().selectedEthnicity);
 	}
 
 	selectedState(eventKey, event){
@@ -50,7 +49,7 @@ class Ethnicity extends React.Component {
 		
 		<FormGroup className="width-100">
 
-		<SplitButton className="search-dropdown" title={this.props.selectedEthnicity} toggleLabel="Search by Ethnicity" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<SplitButton className="search-dropdown" title={this.props.selectedEthnicity} toggleLabel="Ethnicity" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="Asian and Pacific Islander">Asian and Pacific Islander</MenuItem>
     		<MenuItem eventKey="Black Non-Hispanic">Black Non-Hispanic</MenuItem>
     		<MenuItem eventKey="White Non-Hispanic">White Non-Hispanic</MenuItem>

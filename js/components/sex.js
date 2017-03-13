@@ -53,7 +53,7 @@ class Sex extends React.Component {
 		<form>
 		<FormGroup>
 
-		<SplitButton className="search-dropdown" title={this.props.selectedSex} toggleLabel="Search by Sex" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<SplitButton className="search-dropdown" title={this.props.selectedSex} toggleLabel="Sex" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="M">Male</MenuItem>
     		<MenuItem eventKey="F">Female</MenuItem>
     	</SplitButton>

@@ -47,15 +47,6 @@ class Home extends React.Component {
 			<Button id="appContainerButton" onClick={this.handleClick}>SEARCH YOUR FATE!</Button>
 			</Row>
 
-
-
-
-			
-
-
-
-
-
 			<Modal show={this.props.showAboutModal} onHide={this.closeSignUp}>
               <Modal.Header>
               <h2>What are the Chances? <br/>-- Death in NYC</h2>

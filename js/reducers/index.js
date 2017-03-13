@@ -4,9 +4,9 @@ import { combineReducers, createStore } from 'redux';
 
 const initialState = {
 	response: [],
-	selectedEthnicity: "Search by Ethnicity",
-	selectedSex: "Search by Sex",
-    selectedYear: "Search by Year",
+	selectedEthnicity: "Ethnicity",
+	selectedSex: "Sex",
+    selectedYear: "Year",
     showAboutModal: false  
 }
 
