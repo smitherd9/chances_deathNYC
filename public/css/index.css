@@ -137,7 +137,7 @@ span > p {
 .click-to-enter {
 	text-align: center;
 	margin: 0 auto;
-	padding-bottom: 25em;
+	padding-bottom: 20em;
 }
 
 
@@ -156,7 +156,6 @@ span > p {
 }
 
 .resultsRow {
-	box-shadow: inset -6px -7px 6px 1px black;
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 5em;
@@ -229,6 +228,7 @@ span > p {
 
 .searchRow {
 	margin: 0 auto;
+	padding-bottom: 20em;
 }
 
 .dropdown-toggle {
@@ -274,9 +274,10 @@ span > p {
 
 .appContainer {
 	background: #000000; 
-    height: 100%;    
+/*    height: 100%;    
     width: 100%;
-    position: absolute;
+    min-height: 90vh;*/
+    /*position: absolute;*/
     /*position: fixed; */   
 }
 
@@ -300,7 +301,7 @@ span > p {
 	padding: 1em;
 	border-radius: 10px;
 	display: inline-block;
-	box-shadow: inset 3px -3px 2px 3px black;
+	
 }
 
 
@@ -363,15 +364,20 @@ span > p {
 .footer {
 	position: absolute;	
 	width: 100%;
-	height: 60px;
+	height: 72px;
 	text-align: center;
 	margin: 0 auto;
+/*	bottom: 0;*/
 	padding-top: 1em;
 	background: #8E0E00; 
 	background: -webkit-linear-gradient(to top, #8E0E00 , #0F0F07); 
 	background: linear-gradient(to top, #8E0E00 , #0F0F07); 
         
 
+}
+
+.footer p {
+  margin: 0;
 }
 
 
@@ -418,6 +424,14 @@ span > p {
 	padding-bottom: 5em;
 	text-align: center;
 
+}
+
+.chart-columns {
+	padding: 0;
+}
+
+.chart-row {
+	margin: 0 auto;
 }
 
 text {
