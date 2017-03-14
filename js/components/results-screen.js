@@ -24,17 +24,11 @@ export default class ResultsScreen extends React.Component {
 		
 		
 		return (
-			<div className="resultsScreen">
-
-			<Row className="searchRow width-100">				
-				<Display />
-			</Row>
-
-			<Row className="c3Chart width-100">
-			
+			<div className="resultsScreen">			
+				<Display />			
 				<DisplayChart />
 			
-			</Row>
+			
 
 			<Row className="closeResultsButton width-100">
 			<Col md={12}>				

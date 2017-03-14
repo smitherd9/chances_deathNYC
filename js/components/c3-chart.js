@@ -92,6 +92,12 @@ class Chart extends React.Component {
       			}
       		},
 
+          this.pie = {
+            label: {
+              show: false
+            }
+          },
+
           this.tooltip = {
             show: false
           },
@@ -109,8 +115,23 @@ class Chart extends React.Component {
           }
 
 
+          this.onresize = function() {
+            let width = window.innerWidth;
 
-      	};
+            if (width <= 768) {
+              console.log(this);
+              this.resize({
+                width: 300,
+                height: 300
+              });
+
+            }
+          }
+
+
+
+
+      };
 
 
 	componentWillUpdate(){
@@ -160,6 +181,21 @@ class Chart extends React.Component {
 
 	}
 
+//   componentDidMount() {
+//           this.onresize = function() {
+//             let width = window.innerWidth;
+
+//             if (width <= 768) {
+//               console.log(this);
+//               this.resize({
+//                 width: 300,
+//                 height: 300
+//               });
+
+//             }
+//           }
+// }
+
 
 	
 
@@ -167,7 +203,10 @@ class Chart extends React.Component {
 
 		return(	
 			
-			<div id="chart"><C3Chart data={this.data} grid={this.grid} bar={this.bar} axis={this.axis} tooltip={this.tooltip} padding={this.padding} size={this.size} /></div>
+			<div id="chart"><C3Chart data={this.data} grid={this.grid} 
+      bar={this.bar} axis={this.axis} 
+      tooltip={this.tooltip} padding={this.padding} size={this.size} 
+      pie={this.pie} onresize={this.onresize} resize={this.resize} /></div>
 
 			
 			
