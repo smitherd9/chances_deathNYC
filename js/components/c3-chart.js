@@ -3,8 +3,6 @@ import actions from '../actions/index';
 import store from '../store';
 import { connect } from 'react-redux';
 import  C3Chart  from 'react-c3js';
-// const isBrowser = typeof window !== 'undefined';
-// const C3Chart = isBrowser ? require( 'react-c3js') : undefined;
 
 
 
@@ -106,7 +104,7 @@ class Chart extends React.Component {
           },
 
           this.size = {
-            width: 700,
+            width: 500,
             height: 700
           }
 

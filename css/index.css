@@ -414,6 +414,25 @@ span > p {
 
 }
 
+@media screen and (max-width: 768px) {
+	.c3 {
+		height: 400px;
+
+	}
+
+	#chart {
+		padding-bottom: 18em;
+	}
+
+
+}
+
+@media screen and (max-width: 618px) {
+	.c3 {
+		height: 300px;
+	}
+}
+
 
 /*C3 Chart*/
 
@@ -426,11 +445,19 @@ span > p {
 
 }
 
+.c3  {
+	width: 100%;
+}
+
 .chart-columns {
 	padding: 0;
 }
 
 .chart-row {
+	margin: 0 auto;
+}
+
+.c3Chart {
 	margin: 0 auto;
 }
 
