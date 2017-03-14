@@ -433,6 +433,12 @@ span > p {
 	}
 }
 
+@media screen and (min-width: 579px) and (max-width: 992px) {
+	.dropdown-toggle {
+		width: 14%;
+	}
+}
+
 
 /*C3 Chart*/
 
