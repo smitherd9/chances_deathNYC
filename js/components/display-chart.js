@@ -33,6 +33,8 @@ class DisplayChart extends React.Component {
 			{this.chart}
 			</Col>
 			</Row>
+
+			
 			
 			</div>
 			

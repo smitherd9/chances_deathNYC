@@ -420,16 +420,15 @@ span > p {
 
 	}
 
-	#chart {
-		padding-bottom: 18em;
-	}
-
-
 }
 
-@media screen and (max-width: 618px) {
+@media screen and (min-width: 400px) and (max-width: 618px) {
 	.c3 {
 		height: 300px;
+	}
+
+	#chart {
+		padding-bottom: 35em;
 	}
 }
 
@@ -446,7 +445,7 @@ span > p {
 
 	background: #FFFFFF; 
 	padding-top: 7em;
-	padding-bottom: 5em;
+	padding-bottom: 35em;
 	text-align: center;
 
 }

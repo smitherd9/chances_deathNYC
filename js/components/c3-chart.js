@@ -94,7 +94,7 @@ class Chart extends React.Component {
 
           this.pie = {
             label: {
-              show: false
+              show: true
             }
           },
 
@@ -102,16 +102,20 @@ class Chart extends React.Component {
             show: false
           },
 
-          this.padding = {
-            top: 20,
-            right: 20,
-            left: 20,
-            bottom: 30 
+          // this.padding = {
+          //   top: 20,
+          //   right: 20,
+          //   left: 20,
+          //   bottom: 30 
+          // },
+
+          this.legend = {
+            show: true
           },
 
           this.size = {
-            width: 500,
-            height: 700
+            width: 400,
+            height: 800
           }
 
 
@@ -206,7 +210,7 @@ class Chart extends React.Component {
 			<div id="chart"><C3Chart data={this.data} grid={this.grid} 
       bar={this.bar} axis={this.axis} 
       tooltip={this.tooltip} padding={this.padding} size={this.size} 
-      pie={this.pie} onresize={this.onresize} resize={this.resize} /></div>
+      pie={this.pie} onresize={this.onresize} resize={this.resize} legend={this.legend} /></div>
 
 			
 			
