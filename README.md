@@ -25,19 +25,19 @@ Dev dependencies include Chai and Mocha for testing and Travis is used for conti
 ## Screenshots
 
 
-#### Intro Screen
-![introscreen](https://cloud.githubusercontent.com/assets/17256531/21616303/e8365550-d1ae-11e6-81c9-13e2e1ab39c4.PNG)
-
 
 #### Home Screen
-![homescreen](https://cloud.githubusercontent.com/assets/17256531/21616316/f6eb3b88-d1ae-11e6-8fd6-035ce91b70dc.PNG)
+![ss-watc-d_home-desktop](https://cloud.githubusercontent.com/assets/17256531/24046150/f8c187aa-0af7-11e7-9a2f-5eae1e326157.png)
 
 
 #### Search Screen
-![searchscreen](https://cloud.githubusercontent.com/assets/17256531/21616320/fd1a9652-d1ae-11e6-8995-1c22534ba95c.PNG)
+![ss-watc-d_search-desktop](https://cloud.githubusercontent.com/assets/17256531/24046155/fb8d4514-0af7-11e7-9992-65d24cc2e337.png)
 
 
 #### Results Screen 
-![resultsscreen](https://cloud.githubusercontent.com/assets/17256531/21616325/01371ad0-d1af-11e6-9764-58ab60d49c55.PNG)
+![results-screen1](https://cloud.githubusercontent.com/assets/17256531/24046161/003730fc-0af8-11e7-9b1c-814a3d46a5af.png)
+
+#### C3.js Chart
+![c3-chart](https://cloud.githubusercontent.com/assets/17256531/24046178/0bdb7c74-0af8-11e7-8491-139b51786cb1.png)
 
 
