@@ -4,7 +4,7 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button, FormGroup, FormControl, SplitButton, MenuItem } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, DropdownButton, MenuItem } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 
 
@@ -53,10 +53,10 @@ class Sex extends React.Component {
 		<form>
 		<FormGroup>
 
-		<SplitButton className="search-dropdown" title={this.props.selectedSex} toggleLabel="Sex" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<DropdownButton title={this.props.selectedSex} pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="M">Male</MenuItem>
     		<MenuItem eventKey="F">Female</MenuItem>
-    	</SplitButton>
+    	</DropdownButton>
 
 		</FormGroup>
 		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>

@@ -9,14 +9,6 @@ const selectedEthnicity = (selected) => {
 	}
 }
 
-const SELECTED_ETHNICITY_DEFAULT = 'SELECTED_ETHNICITY_DEFAULT';
-const selectedEthnicityDefault = () => {
-    return {
-        type: SELECTED_ETHNICITY_DEFAULT
-        
-    }
-}
-
 
 const ETHNICITY = 'ETHNICITY';
 const byEthnicitySuccess = (response) => {
@@ -223,9 +215,6 @@ exports.byEthnicitySuccess = byEthnicitySuccess;
 exports.ETHNICITY_ERR = ETHNICITY_ERR;
 exports.byEthnicityError = byEthnicityError;
 exports.byEthnicity = byEthnicity;
-exports.SELECTED_ETHNICITY_DEFAULT = SELECTED_ETHNICITY_DEFAULT;
-exports.selectedEthnicityDefault = selectedEthnicityDefault;
-
 
 exports.SELECTED_SEX = SELECTED_SEX;
 exports.selectedSex = selectedSex;

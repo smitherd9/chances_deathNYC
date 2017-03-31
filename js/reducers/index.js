@@ -28,14 +28,6 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.SELECTED_ETHNICITY_DEFAULT) {
-
-        return Object.assign({}, state, {            
-            selectedEthnicity: "Search by Ethnicity"
-           
-
-        });
-    }
 
     if (action.type === actions.ETHNICITY) {
 

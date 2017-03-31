@@ -3,7 +3,7 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button, SplitButton, MenuItem, FormGroup, FormControl, Grid, Row, Col } from 'react-bootstrap';
+import { Button, DropdownButton, MenuItem, FormGroup, FormControl, Grid, Row, Col } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 
 
@@ -47,14 +47,14 @@ class Ethnicity extends React.Component {
 		<h3>Search by Ethnicity</h3>
 		<form className="width-100">
 		
-		<FormGroup className="width-100">
+		<FormGroup className="width-100" required>
 
-		<SplitButton className="search-dropdown" title={this.props.selectedEthnicity} toggleLabel="Ethnicity" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<DropdownButton title={this.props.selectedEthnicity} pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="Asian and Pacific Islander">Asian and Pacific Islander</MenuItem>
     		<MenuItem eventKey="Black Non-Hispanic">Black Non-Hispanic</MenuItem>
     		<MenuItem eventKey="White Non-Hispanic">White Non-Hispanic</MenuItem>
     		<MenuItem eventKey="Hispanic">Hispanic</MenuItem>
-    	</SplitButton>
+    	</DropdownButton>
 		
 		</FormGroup>
 

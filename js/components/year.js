@@ -3,7 +3,7 @@ import actions from '../actions/index';
 import store from '../store';
 import Display from './display-results';
 import { connect } from 'react-redux';
-import { Button, FormGroup, FormControl, SplitButton, MenuItem } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, DropdownButton, MenuItem } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 
 
@@ -50,7 +50,7 @@ class Year extends React.Component {
 		<form>
 		<FormGroup>
 
-		<SplitButton className="search-dropdown" title={this.props.selectedYear} toggleLabel="Year" pullRight id="split-button-pull-right" onSelect={this.selectedState}>
+		<DropdownButton title={this.props.selectedYear} pullRight id="split-button-pull-right" onSelect={this.selectedState}>
 			<MenuItem eventKey="2007">2007</MenuItem>
     		<MenuItem eventKey="2008">2008</MenuItem>
     		<MenuItem eventKey="2009">2009</MenuItem>
@@ -59,7 +59,7 @@ class Year extends React.Component {
     		<MenuItem eventKey="2012">2012</MenuItem>
     		<MenuItem eventKey="2013">2013</MenuItem>
     		<MenuItem eventKey="2014">2014</MenuItem>
-    	</SplitButton>
+    	</DropdownButton>
 
 		</FormGroup>
 		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>
