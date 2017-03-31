@@ -17,12 +17,14 @@ class Year extends React.Component {
 	}
 
 	handleClick(e) {
-		e.preventDefault();	
-		store.dispatch(actions.byYear(store.getState().selectedYear));
-		console.log(store.getState());
-		console.log('selected: ' + store.getState().selectedSex);
-		console.log('typeOf: ' + typeof(store.getState().selectedYear));
-		this.showResults();
+		e.preventDefault();
+		if (this.props.selectedYear !== "Year") {	
+			store.dispatch(actions.byYear(store.getState().selectedYear));
+			console.log(store.getState());
+			console.log('selected: ' + store.getState().selectedSex);
+			console.log('typeOf: ' + typeof(store.getState().selectedYear));
+			this.showResults();
+		}
 	}
 
 	selectedState(eventKey, event){

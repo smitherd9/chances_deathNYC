@@ -20,12 +20,14 @@ class Sex extends React.Component {
 	}
 
 	handleClick(e) {
-		e.preventDefault();	
-		store.dispatch(actions.bySex(store.getState().selectedSex));
-		console.log(store.getState());
-		console.log('selected: ' + store.getState().selectedSex);
-		console.log('typeOf: ' + typeof(store.getState().selectedSex));
-		this.showResults();
+		e.preventDefault();
+		if (this.props.selectedSex !== "Sex") {	
+			store.dispatch(actions.bySex(store.getState().selectedSex));
+			console.log(store.getState());
+			console.log('selected: ' + store.getState().selectedSex);
+			console.log('typeOf: ' + typeof(store.getState().selectedSex));
+			this.showResults();
+		}
 	}
 
 	selectedState(eventKey, event){
