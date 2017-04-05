@@ -55,6 +55,7 @@ app.get('/year/:year', function(req, res) {
         .end(function(response) {
         storeInData(response.body);        
         res.json(finalChancesScore());
+        console.log(response.body);
         
 
         });
@@ -62,7 +63,7 @@ app.get('/year/:year', function(req, res) {
 });
 
 
-app.get('/ethandsex/:ethnicity:sex', function(req, res) {
+app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
     req.query.sex = req.params.sex;     
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
@@ -73,6 +74,7 @@ app.get('/ethandsex/:ethnicity:sex', function(req, res) {
         .end(function(response) {
         storeInData(response.body);        
         res.json(finalChancesScore());
+        console.log(response.body);
         
 
         });
@@ -80,7 +82,7 @@ app.get('/ethandsex/:ethnicity:sex', function(req, res) {
 });
 
 
-app.get('/ethandyear/:ethnicity:year', function(req, res) {
+app.get('/ethandyear/:ethnicity/:year', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
     req.query.year = req.params.year;     
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
@@ -98,7 +100,7 @@ app.get('/ethandyear/:ethnicity:year', function(req, res) {
 });
 
 
-app.get('/sexandyear/:sex:year', function(req, res) {
+app.get('/sexandyear/:sex/:year', function(req, res) {
     req.query.sex = req.params.sex; 
     req.query.year = req.params.year;     
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
@@ -116,7 +118,7 @@ app.get('/sexandyear/:sex:year', function(req, res) {
 });
 
 
-app.get('/ethsexandyear/:sex:year', function(req, res) {
+app.get('/ethsexandyear/:ethnicity/:sex/:year', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
     req.query.sex = req.params.sex; 
     req.query.year = req.params.year;     
