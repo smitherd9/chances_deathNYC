@@ -70,6 +70,7 @@ app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
         .query(req.query)
+        console.log(req.query);
 
         .end(function(response) {
         storeInData(response.body);        
