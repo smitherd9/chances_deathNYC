@@ -46,7 +46,7 @@ class Sex extends React.Component {
 
 
 	render() {
-		console.log(this.props);
+		console.log(this.props.selectedSex);
 		return (
 		
 
@@ -61,7 +61,7 @@ class Sex extends React.Component {
     	</DropdownButton>
 
 		</FormGroup>
-		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>
+		
 		</form>
 		</div>		
 		

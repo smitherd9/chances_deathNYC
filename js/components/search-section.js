@@ -4,6 +4,7 @@ import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import Ethnicity from './ethnicity';
 import Sex from './sex';
 import Year from './year';
+import GoButton from './go_button';
 import { browserHistory } from 'react-router'
 
 
@@ -28,10 +29,9 @@ export default class SearchSection extends React.Component {
 			<Row className="searchRow width-100">
 				<Col md={4}><Ethnicity /></Col>
 				<Col md={4}><Sex /></Col>
-				<Col md={4}><Year /></Col>	
-			</Row>
-			
-			
+				<Col md={4}><Year /></Col>
+				<GoButton />	
+			</Row>	
 			
 			
 			

@@ -70,7 +70,7 @@ class Ethnicity extends React.Component {
 
 		</FormGroup>
 
-		<Button bsStyle="primary" bsSize="large" id="appContainerButton" className="width-50"  type="button" onClick={this.handleClick}>Go!</Button>
+
 		
 		</form>
 		
