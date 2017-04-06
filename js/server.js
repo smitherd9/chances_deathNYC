@@ -63,9 +63,11 @@ app.get('/year/:year', function(req, res) {
 });
 
 
-app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
+app.get('/ethandsex/:ethnicity', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
-    req.query.sex = req.params.sex;     
+    // req.query.sex = req.params.sex;
+    // create new obj declaration for 67 - 70 and pass that to query
+    // console.log first       
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
@@ -73,7 +75,10 @@ app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
         console.log(req.query);
 
         .end(function(response) {
-        storeInData(response.body);        
+        storeInData(response.body);
+        // is 78 running but not completing?
+        // try to rewrite storeInData and finalchancesscore, has explicit arg that depends on storeinData or res.body
+        //can console.log finalChancesScore        
         res.json(finalChancesScore());
         console.log(response.body);
         
