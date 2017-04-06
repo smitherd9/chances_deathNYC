@@ -385,9 +385,19 @@ span > p {
 
 /*Media Queries*/
 
+@media screen and (min-width: 993px) {
+	#appContainerButton {
+		width: 15%;
+	}
+}
+
 @media screen and (max-width: 992px) {
 	.display-toggle {
 		width: 14%;
+	}
+
+	#appContainerButton {
+		width: 48%;
 	}
 }
 
