@@ -324,7 +324,7 @@ const byEthnicityandSex = function(ethnicity, sex) {
 
 const byEthnicityandYear = function(ethnicity, year) {
     return function(dispatch) {
-        var url = new Request('https://calm-sands-83203.herokuapp.com/ethandyear/' + ethnicity + year, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/ethandyear/' + ethnicity + '/' + year, 
             {method: 'GET', 
             headers: {
                 'Accept': 'application/json',
@@ -357,7 +357,7 @@ const byEthnicityandYear = function(ethnicity, year) {
 
 const byEthnicitySexandYear = function(ethnicity, sex, year) {
     return function(dispatch) {
-        var url = new Request('https://calm-sands-83203.herokuapp.com/ethsexandyear/' + ethnicity + sex + year, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/ethsexandyear/' + ethnicity + '/' + sex + '/' + year, 
             {method: 'GET', 
             headers: {
                 'Accept': 'application/json',
@@ -390,7 +390,7 @@ const byEthnicitySexandYear = function(ethnicity, sex, year) {
 
 const bySexandYear = function(sex, year) {
     return function(dispatch) {
-        var url = new Request('https://calm-sands-83203.herokuapp.com/sexandyear/' + sex + year, 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/sexandyear/' + sex + '/' + year, 
             {method: 'GET', 
             headers: {
                 'Accept': 'application/json',
