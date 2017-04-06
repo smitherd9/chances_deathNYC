@@ -63,7 +63,7 @@ app.get('/year/:year', function(req, res) {
 });
 
 
-app.post('/ethandsex/:ethnicity/:sex', function(req, res) {
+app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
     req.query.sex = req.params.sex;
     // create new obj declaration for 67 - 70 and pass that to query

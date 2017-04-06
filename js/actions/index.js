@@ -290,13 +290,14 @@ const byYear = function(year) {
 
 const byEthnicityandSex = function(ethnicity, sex) {
     return function(dispatch) {
-        var url = new Request('https://calm-sands-83203.herokuapp.com/ethandsex/' + ethnicity, 
-            {method: 'POST', 
+        var url = new Request('https://calm-sands-83203.herokuapp.com/ethandsex/' + ethnicity + '/' + sex, 
+            {method: 'GET', 
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
         });
+        console.log(url);
         return fetch(url).then(function(response) {
             if (response.status < 200 || response.status >= 300) {
                 var error = new Error(response.statusText)
