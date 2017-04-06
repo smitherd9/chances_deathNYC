@@ -63,9 +63,9 @@ app.get('/year/:year', function(req, res) {
 });
 
 
-app.get('/ethandsex/:ethnicity', function(req, res) {
+app.post('/ethandsex/:ethnicity/:sex', function(req, res) {
     req.query.race_ethnicity = req.params.ethnicity;
-    // req.query.sex = req.params.sex;
+    req.query.sex = req.params.sex;
     // create new obj declaration for 67 - 70 and pass that to query
     // console.log first       
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
