@@ -8,8 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-var Data = {
-    chancesRating: 0,
+var Data = {    
     returnData: []
 };
 
@@ -48,6 +47,87 @@ app.get('/ethnicity/:ethnicity', function(req, res) {
 
 app.get('/year/:year', function(req, res) {
     req.query.year = req.params.year;    
+    req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
+
+        unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
+        .query(req.query)
+
+        .end(function(response) {
+        storeInData(response.body);        
+        res.json(finalChancesScore());
+        console.log(response.body);
+        
+
+        });
+
+});
+
+
+app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
+    req.query.race_ethnicity = req.params.ethnicity;
+    req.query.sex = req.params.sex;
+    // create new obj declaration for 67 - 70 and pass that to query
+    // console.log first       
+    req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
+
+        unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
+        .query(req.query)
+        console.log(req.query);
+
+        .end(function(response) {
+        storeInData(response.body);
+        // is 78 running but not completing?
+        // try to rewrite storeInData and finalchancesscore, has explicit arg that depends on storeinData or res.body
+        //can console.log finalChancesScore        
+        res.json(finalChancesScore());
+        console.log(response.body);
+        
+
+        });
+
+});
+
+
+app.get('/ethandyear/:ethnicity/:year', function(req, res) {
+    req.query.race_ethnicity = req.params.ethnicity;
+    req.query.year = req.params.year;     
+    req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
+
+        unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
+        .query(req.query)
+
+        .end(function(response) {
+        storeInData(response.body);        
+        res.json(finalChancesScore());
+        
+
+        });
+
+});
+
+
+app.get('/sexandyear/:sex/:year', function(req, res) {
+    req.query.sex = req.params.sex; 
+    req.query.year = req.params.year;     
+    req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
+
+        unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
+        .query(req.query)
+
+        .end(function(response) {
+        storeInData(response.body);        
+        res.json(finalChancesScore());
+        
+
+        });
+
+});
+
+
+app.get('/ethsexandyear/:ethnicity/:sex/:year', function(req, res) {
+    req.query.race_ethnicity = req.params.ethnicity;
+    req.query.sex = req.params.sex; 
+    req.query.year = req.params.year;     
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
