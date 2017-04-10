@@ -71,8 +71,7 @@ app.get('/ethandsex/:ethnicity/:sex', function(req, res) {
     req.query.$$app_token = 'bOdo0GBO11GSiRssvuQLv0t3A';
 
         unirest.get('https://data.cityofnewyork.us/resource/uvxr-2jwn.json?')
-        .query(req.query)
-        console.log(req.query);
+        .query(req.query)        
 
         .end(function(response) {
         storeInData(response.body);
