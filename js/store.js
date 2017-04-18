@@ -7,7 +7,7 @@ import { applyMiddleware } from 'redux';
 
 
 
-const store = createStore(DeathReducer, applyMiddleware(thunk));
+const store = createStore(DeathReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
 
 
 console.log(store.getState());

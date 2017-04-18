@@ -16,7 +16,7 @@ class Display extends React.Component {
 	render() {
 
 			if (this.props.response) {
-	console.log(this.props.response);
+			console.log(this.props.response);
 }
 		return (
 					

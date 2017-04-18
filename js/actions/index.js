@@ -181,6 +181,13 @@ const closeAboutModal = () => {
     }
 }
 
+const RESET_STATE = 'RESET_STATE';
+const resetState = () => {
+    return {
+        type: RESET_STATE
+    }
+}
+
 
 // Action Creators 
 
@@ -447,27 +454,37 @@ exports.byYearError = byYearError;
 exports.byYear = byYear;
 
 exports.byEthnicityandSex = byEthnicityandSex;
-exports.byEthnicityandYear = byEthnicityandYear;
-exports.bySexandYear = bySexandYear;
-exports.byEthnicitySexandYear = byEthnicitySexandYear;
-
 exports.byEthandSexSuccess = byEthandSexSuccess;
 exports.byEthandSexError = byEthandSexError;
+exports.ETHANDSEX = ETHANDSEX;
+exports.ETHANDSEX_ERR = ETHANDSEX_ERR;
 
+exports.byEthnicityandYear = byEthnicityandYear;
 exports.byEthandYearSuccess = byEthandYearSuccess;
 exports.byEthandYearError = byEthandYearError;
+exports.ETHANDYEAR = ETHANDYEAR;
+exports.ETHANDYEAR_ERR = ETHANDYEAR_ERR;
 
+exports.bySexandYear = bySexandYear;
 exports.bySexandYearSuccess = bySexandYearSuccess;
 exports.bySexandYearError = bySexandYearError;
+exports.SEXANDYEAR = SEXANDYEAR;
+exports.SEXANDYEAR_ERR = SEXANDYEAR_ERR;
 
+exports.byEthnicitySexandYear = byEthnicitySexandYear;
 exports.byEthSexandYearSuccess = byEthSexandYearSuccess;
 exports.byEthSexandYearError = byEthSexandYearError;
+exports.ETHSEXANDYEAR = ETHSEXANDYEAR;
+exports.ETHSEXANDYEAR_ERR = ETHSEXANDYEAR_ERR;
 
 exports.SHOW_ABOUT_MODAL = SHOW_ABOUT_MODAL;
 exports.showAboutModal = showAboutModal;
 
 exports.CLOSE_ABOUT_MODAL = CLOSE_ABOUT_MODAL;
 exports.closeAboutModal = closeAboutModal;
+
+exports.RESET_STATE = RESET_STATE;
+exports.resetState = resetState;
 
 
 

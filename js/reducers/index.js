@@ -1,6 +1,6 @@
 import actions from '../actions/index';
 import store from '../store';
-import { combineReducers, createStore } from 'redux';
+
 
 const initialState = {
 	response: [],
@@ -29,7 +29,7 @@ const DeathReducer = function(state, action) {
     }
 
 
-    if (action.type === actions.ETHNICITY) {
+    else if (action.type === actions.ETHNICITY) {
 
     	return Object.assign({}, state, {
             response: action.response
@@ -40,7 +40,7 @@ const DeathReducer = function(state, action) {
     }
     
 
-    if (action.type === actions.SELECTED_SEX) {
+    else if (action.type === actions.SELECTED_SEX) {
 
         return Object.assign({}, state, {       
             
@@ -50,7 +50,7 @@ const DeathReducer = function(state, action) {
     }
 
 
-    if (action.type === actions.SEX) {
+    else if (action.type === actions.SEX) {
 
         return Object.assign({}, state, {            
             response: action.response
@@ -59,7 +59,7 @@ const DeathReducer = function(state, action) {
 
     }
 
-    if (action.type === actions.SELECTED_YEAR) {
+    else if (action.type === actions.SELECTED_YEAR) {
 
         return Object.assign({}, state, {       
             
@@ -68,7 +68,7 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.YEAR) {
+    else if (action.type === actions.YEAR) {
 
         return Object.assign({}, state, {       
             
@@ -77,7 +77,7 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.ETHANDSEX) {
+    else if (action.type === actions.ETHANDSEX) {
 
         return Object.assign({}, state, {       
             
@@ -86,7 +86,7 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.ETHANDYEAR) {
+    else if (action.type === actions.ETHANDYEAR) {
 
         return Object.assign({}, state, {       
             
@@ -95,7 +95,7 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.SEXANDYEAR) {
+    else if (action.type === actions.SEXANDYEAR) {
 
         return Object.assign({}, state, {       
             
@@ -104,16 +104,17 @@ const DeathReducer = function(state, action) {
         });
     }
 
-    if (action.type === actions.ETHSEXANDYEAR) {
-
+    else if (action.type === actions.ETHSEXANDYEAR) {
+        console.log('We made it!');
         return Object.assign({}, state, {       
             
             response: action.response
+            
 
         });
     }
 
-    if (action.type === actions.SHOW_ABOUT_MODAL) {
+    else if (action.type === actions.SHOW_ABOUT_MODAL) {
 
         return Object.assign({}, state, {       
             
@@ -123,7 +124,7 @@ const DeathReducer = function(state, action) {
     }
 
 
-    if (action.type === actions.CLOSE_ABOUT_MODAL) {
+    else if (action.type === actions.CLOSE_ABOUT_MODAL) {
 
         return Object.assign({}, state, {       
             
@@ -132,7 +133,20 @@ const DeathReducer = function(state, action) {
         });
     }
 
- return state;
+    else if (action.type === actions.RESET_STATE) {
+
+        return Object.assign({}, state, {       
+            
+            selectedEthnicity: "Ethnicity",
+            selectedSex: "Sex",
+            selectedYear: "Year"
+
+        });
+    }
+
+ else {
+    return state;
+ }
 
 };
 
