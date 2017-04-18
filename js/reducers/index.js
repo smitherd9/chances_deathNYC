@@ -77,6 +77,42 @@ const DeathReducer = function(state, action) {
         });
     }
 
+    if (action.type === actions.ETHANDSEX) {
+
+        return Object.assign({}, state, {       
+            
+            response: action.response
+
+        });
+    }
+
+    if (action.type === actions.ETHANDYEAR) {
+
+        return Object.assign({}, state, {       
+            
+            response: action.response
+
+        });
+    }
+
+    if (action.type === actions.SEXANDYEAR) {
+
+        return Object.assign({}, state, {       
+            
+            response: action.response
+
+        });
+    }
+
+    if (action.type === actions.ETHSEXANDYEAR) {
+
+        return Object.assign({}, state, {       
+            
+            response: action.response
+
+        });
+    }
+
     if (action.type === actions.SHOW_ABOUT_MODAL) {
 
         return Object.assign({}, state, {       

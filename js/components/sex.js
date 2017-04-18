@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import actions from '../actions/index';
 import store from '../store';
-import Display from './display-results';
 import { connect } from 'react-redux';
 import { Button, FormGroup, FormControl, DropdownButton, MenuItem } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
@@ -39,10 +38,6 @@ class Sex extends React.Component {
 		browserHistory.push('/results');
 	}
 
-	componentDidUpdate() {
-		<Display />
-		
-	}
 
 
 	render() {

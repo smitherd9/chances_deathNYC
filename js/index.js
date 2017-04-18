@@ -14,7 +14,7 @@ import SearchSection from './components/search-section';
 import Home from './components/home';
 import Chart from './components/c3-chart';
 
-
+console.log('store', store.getState());
 render(<Provider store={store}>
 		<Router history={browserHistory}>
 			<Route path="/" component={AppContainer} >

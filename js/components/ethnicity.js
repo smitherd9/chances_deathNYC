@@ -1,7 +1,6 @@
 import React from 'react';
 import actions from '../actions/index';
 import store from '../store';
-import Display from './display-results';
 import { connect } from 'react-redux';
 import { Button, DropdownButton, MenuItem, FormGroup, FormControl, HelpBlock, Grid, Row, Col } from 'react-bootstrap';
 import { browserHistory } from 'react-router';

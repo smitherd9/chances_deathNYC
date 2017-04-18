@@ -12,15 +12,12 @@ import Display3 from './display3';
 
 
 class Display extends React.Component {
-	
-
-	constructor(props){
-		super(props);
-		
-	}
-
 
 	render() {
+
+			if (this.props.response) {
+	console.log(this.props.response);
+}
 		return (
 					
 			<div className="width-100">

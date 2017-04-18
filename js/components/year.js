@@ -36,11 +36,6 @@ class Year extends React.Component {
 		browserHistory.push('/results');
 	}
 
-	componentDidUpdate() {
-		
-		
-	}
-
 
 	render() {
 		console.log(this.props.selectedYear);

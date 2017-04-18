@@ -1,7 +1,6 @@
 import React from 'react';
 import actions from '../actions/index';
 import store from '../store';
-import Display from './display-results';
 import { connect } from 'react-redux';
 import { Button, FormGroup } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
@@ -18,6 +17,7 @@ class GoButton extends React.Component {
 
 	showResults() {		
 		browserHistory.push('/results');
+		
 	}
 
 	handleClick(e){
