@@ -2,6 +2,15 @@
 	box-sizing: border-box;
 }
 
+/*.react-alerts {
+	background-color: black;
+}*/
+
+.content  {	
+	color: red;
+	font-size: 16px;
+	height: 24px;
+}
 
 .width-100 { 
 	width: 100%; 
