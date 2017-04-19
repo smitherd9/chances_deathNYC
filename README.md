@@ -1,6 +1,6 @@
 # What Are The Chances?  -- Death in NYC
 
-What Are The Chances? -- Death in NYC is an app designed to give users 
+[What are the Chances? -- Death in NYC](https://calm-sands-83203.herokuapp.com/) is an app designed to give users 
 an idea of their likely cause of death based on data from NYC's Department of Health 
 and Open Data API.
 
