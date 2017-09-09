@@ -102,13 +102,6 @@ class Chart extends React.Component {
             show: false
           },
 
-          // this.padding = {
-          //   top: 20,
-          //   right: 20,
-          //   left: 20,
-          //   bottom: 30 
-          // },
-
           this.legend = {
             show: true
           },
@@ -185,23 +178,6 @@ class Chart extends React.Component {
 
 	}
 
-//   componentDidMount() {
-//           this.onresize = function() {
-//             let width = window.innerWidth;
-
-//             if (width <= 768) {
-//               console.log(this);
-//               this.resize({
-//                 width: 300,
-//                 height: 300
-//               });
-
-//             }
-//           }
-// }
-
-
-	
 
 	render() {	
 
