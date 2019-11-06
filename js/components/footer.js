@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
                     <a href="https://www.linkedin.com/in/daniel-smither-62b871130" target="_blank">
                     	<i className="fa fa-linkedin-square fa-2x hvr-grow-rotate" aria-hidden="true"></i>
                     	</a>
-                    	<i className="fa fa-copyright" aria-hidden="true"></i>2016 A project by
+                    	<i className="fa fa-copyright" aria-hidden="true"></i>2019 A project by
 
                     	<a href="https://github.com/smitherd9" target="_blank">
                     <i className="fa fa-github fa-2x hvr-grow-rotate" aria-hidden="true"></i>
