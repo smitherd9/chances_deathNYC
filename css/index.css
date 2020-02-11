@@ -138,11 +138,15 @@ span > p {
 
 }
 
+
 .homeSection {
 	background: #000000;
 	background-image: url('../img/candles.JPG');
+	background-repeat: no-repeat; 
+	background-position: center center; 
+	background-attachment: fixed;
 	background-size: cover;
-	padding-bottom: 15em;
+	/* padding-bottom: 15em; */
 }
 
 .about {
@@ -294,7 +298,7 @@ span > p {
 
 
 .appContainer {
-	background: #000000; 
+	background: #000000;
 }
 
 #appContainerScreen {
