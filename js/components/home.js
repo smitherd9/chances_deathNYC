@@ -42,7 +42,7 @@ class Home extends React.Component {
 			</Col>
 			</Row>
 			<Row className="homeScreen2 width-100">
-				<span className="about hvr-grow-shadow" onClick={this.showAboutModal}>Learn More</span>				
+				<span className="hvr-grow-shadow" onClick={this.showAboutModal}>Learn More</span>				
 			</Row>
 
 			<Row className="click-to-enter width-100">
