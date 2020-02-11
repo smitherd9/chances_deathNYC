@@ -37,6 +37,7 @@
 
 .navbar-header {
 	float: none;
+	margin: 0 auto;
 
 }
 
@@ -49,8 +50,7 @@
 .navbar-brand h1 {
 	font-family: "Montserrat", sans-serif;
 	font-size: 36px;
-	font-weight: 600;
-	margin: 1em 0em 0.2em 0em;
+	font-weight: 600;			
 	
 }
 
@@ -113,7 +113,7 @@ span > p {
 .homeScreen {
 	text-align: center;
 	margin: 0 auto;
-	padding-bottom: 3em;
+	
 }
 
 .homeScreen p {
@@ -128,6 +128,21 @@ span > p {
 	text-align: center;
 	margin: 0 auto;
 	
+}
+
+.homeScreen2 > span {
+	margin: 0 auto;
+	color: #FFFFFF;
+	cursor: pointer;
+	padding: 0.2em;
+
+}
+
+.homeSection {
+	background: #000000;
+	background-image: url('../img/candles.jpg');
+	background-size: cover;
+	padding-bottom: 15em;
 }
 
 .about {
@@ -207,9 +222,10 @@ span > p {
 
 #appContainerButton {	
 	cursor:pointer;	
+	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
 	background-color: #CC0000;
-	/*border: 1px solid white;*/
+	border: 1px solid white;
 	color: white;
 	padding: 12px 8px; 
 }
